@@ -8,6 +8,13 @@ var RecipeActions = {
       actionType: RecipeConstants.RECIPES_RECEIVED,
       recipes: recipes
     });
+  },
+
+  receiveRecipe: function (recipe) {
+    Dispatcher.dispatch({
+      actionType: RecipeConstants.RECIPE_RECEIVED,
+      recipe: recipe
+    });
   }
 };
 

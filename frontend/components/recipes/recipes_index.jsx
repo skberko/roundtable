@@ -1,11 +1,13 @@
 var React = require('react');
 var RecipeStore = require('../../stores/recipe_store.js');
-var ApiUtil = require('../../util/api_util.js')
-var RecipesIndexItem = require('./recipes_index_item.jsx')
+var ApiUtil = require('../../util/api_util.js');
+var RecipesIndexItem = require('./recipes_index_item.jsx');
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
 
 var RecipesIndex = React.createClass({
   getInitialState: function () {
-    return { recipes: RecipeStore.all() }
+    return { recipes: RecipeStore.all() };
   },
 
   _onChange: function () {
@@ -23,13 +25,16 @@ var RecipesIndex = React.createClass({
 
   render: function () {
     return(
-      <ul>{this.state.recipes.map(function (recipe) {
-        return(<RecipesIndexItem key={recipe.id} recipe={recipe}/>)
-      })}</ul>
+      <div>
+        <ul>{this.state.recipes.map(function (recipe) {
+          return(<RecipesIndexItem key={recipe.id} recipe={recipe}/>);
+        })}</ul>
+        <br/>
+        <Link to="recipes/new">Add New Recipe</Link>
+      </div>
     );
   }
 
 });
-
 
 module.exports = RecipesIndex;

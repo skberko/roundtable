@@ -7,8 +7,8 @@ var React = require('react');
           <p>Dish: {this.props.recipe.title}</p>
           <p>Directions: {this.props.recipe.body}</p>
         </li>
-      )
+      );
     }
   });
 
-module.exports = RecipesIndexItem
+module.exports = RecipesIndexItem;

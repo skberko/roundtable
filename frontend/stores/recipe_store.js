@@ -8,29 +8,37 @@ var _recipes = {};
 
 var resetRecipes = function (recipes) {
   _recipes = {};
-  console.log(recipes);
   recipes.forEach(function (recipe) {
     _recipes[recipe.id] = recipe;
   });
+  RecipeStore.__emitChange();
+};
+
+var resetRecipe = function (recipe) {
+  _recipes[recipe.id] = recipe;
+  RecipeStore.__emitChange();
 };
 
 RecipeStore.all = function () {
   // console.log(_recipes);
   var recipes = [];
   for (var id in _recipes) {
-    recipes.push(_recipes[id]);
+    if (_recipes.hasOwnProperty(id)) {
+      recipes.push(_recipes[id]);
+    }
   }
   return recipes;
-}
+};
 
 RecipeStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case RecipeConstants.RECIPES_RECEIVED:
-      resetRecipes(payload.recipes)
+      resetRecipes(payload.recipes);
+      break;
+    case RecipeConstants.RECIPE_RECEIVED:
+      resetRecipe(payload.recipe);
       break;
   }
-
-  RecipeStore.__emitChange();
 };
 
 module.exports = RecipeStore;
