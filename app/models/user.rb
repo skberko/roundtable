@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
 
   # associations go here
 
+  has_many :recipes,
+    class_name: "Recipe",
+    primary_key: :author_id,
+    foreign_key: :id
+
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)

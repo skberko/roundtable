@@ -11,17 +11,21 @@ var ApiUtil = {
     });
   },
 
-  // should below be?
-  //   createRecipe: function (recipe, callback) {
-  createRecipe: function (recipe) {
+  createRecipe: function (recipe, callback, err) {
     $.ajax({
       url: "api/recipes",
       method: "POST",
       data: {recipe: recipe},
       success: function () {
         ApiActions.receiveRecipe(recipe);
+        callback && callback();
+      },
+      error: function (message) {
+        alert("All required fields must be complete!");
+        // console.log(message);
+        // err && err();
       }
-    })
+    });
   }
 
 };

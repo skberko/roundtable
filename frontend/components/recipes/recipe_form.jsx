@@ -21,11 +21,29 @@ var RecipeForm = React.createClass({
     return this.blankAttrs;
   },
 
+  handleSubmit: function (e) {
+    e.preventDefault();
+    var recipe = {
+      // this refers to the comoponent (i.e. the form)
+      title: this.state.title,
+      body: this.state.body,
+      image_url: this.state.image_url,
+      author_id: this.state.author_id
+    };
+    var return_to_index_callback = function () {
+      // pushState is a history method
+      // takes 3 params:
+      // null; url; any data you want to pass, will become query string (pojo)
+      this.props.history.pushState(null, "/");
+    };
+    ApiUtil.createRecipe(recipe, return_to_index_callback.bind(this));
+  },
+
   render: function () {
     return(
-      <form className="new-recipe" onSubmit={ApiUtil.createRecipe}>
+      <form className="new-recipe" onSubmit={this.handleSubmit}>
         <div>
-          <label htmlFor="recipe_title">Dish:</label>
+          <label htmlFor="recipe_title">Dish (required):</label>
           <input
             type="text"
             id="recipe_title"
@@ -33,7 +51,7 @@ var RecipeForm = React.createClass({
         </div>
 
         <div>
-          <label htmlFor="recipe_body">Directions:</label>
+          <label htmlFor="recipe_body">Directions (required):</label>
           <input
             type="text"
             id="recipe_body"
@@ -50,7 +68,7 @@ var RecipeForm = React.createClass({
           />
         </div>
 
-        <button>Add Recipe!</button>
+        <input type="submit" value="Add Recipe!"></input>
         <br/>
       </form>
     );

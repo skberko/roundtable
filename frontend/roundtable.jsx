@@ -17,6 +17,7 @@ var App = React.createClass({
   }
 });
 
+// any components that are listed below are implicitly given History
 var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={RecipesIndex}/>
