@@ -16,10 +16,15 @@ var RecipeDetail = React.createClass({
     return this.getStateFromStore();
   },
 
-  componentWillMount: function () {
-    // need to fetch recipe; and set listener on store for when recipe actually arrives
+  componentDidMount: function () {
+    // need to fetch recipe; and set listener on store for when recipe
+    // actually arrives
     ApiUtil.fetchRecipe(this.props.params.recipeId);
     this.recipeListener = RecipeStore.addListener(this._onChange);
+  },
+
+  componentWillUnmount: function () {
+    this.recipeListener.remove();
   },
 
   // this is what enables the RecipeDetail page to change which recipe it is

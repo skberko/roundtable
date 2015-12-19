@@ -5,7 +5,7 @@ var React = require('react');
       return(
         <li>
           <p>Dish: {this.props.recipe.title}</p>
-          <p>Directions: {this.props.recipe.body}</p>
+          <p>Author: AUTHOR TO BE INTERPOLATED HERE!</p>
         </li>
       );
     }
