@@ -10,6 +10,7 @@ var IndexRoute = ReactRouter.IndexRoute;
 // var ApiUtil = require('./util/api_util.js');
 var RecipesIndex = require('./components/recipes/recipes_index.jsx');
 var RecipeForm = require('./components/recipes/recipe_form.jsx');
+var RecipeDetail = require('./components/recipes/recipe_detail.jsx');
 
 var App = React.createClass({
   render: function () {
@@ -22,6 +23,7 @@ var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={RecipesIndex}/>
     <Route path="recipes/new" component={RecipeForm}/>
+    <Route path="recipes/:recipeId" component={RecipeDetail}/>
   </Route>
 );
 

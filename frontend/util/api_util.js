@@ -11,6 +11,15 @@ var ApiUtil = {
     });
   },
 
+  fetchRecipe: function (id) {
+    $.ajax({
+      url: "api/recipes/" + id,
+      success: function (recipe) {
+        ApiActions.receiveRecipe(recipe);
+      }
+    });
+  },
+
   createRecipe: function (recipe, callback, err) {
     $.ajax({
       url: "api/recipes",

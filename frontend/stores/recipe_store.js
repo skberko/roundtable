@@ -30,6 +30,10 @@ RecipeStore.all = function () {
   return recipes;
 };
 
+RecipeStore.find = function (id) {
+  return _recipes[id];
+};
+
 RecipeStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case RecipeConstants.RECIPES_RECEIVED:
@@ -40,5 +44,7 @@ RecipeStore.__onDispatch = function (payload) {
       break;
   }
 };
+
+window.RecipeStore = RecipeStore;
 
 module.exports = RecipeStore;
