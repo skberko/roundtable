@@ -40,17 +40,19 @@ var RecipeDetail = React.createClass({
   },
 
   render: function () {
-    if (this.state.recipe) {
-      var recipeTitleToBeDisplayed = this.state.recipe.title;
-    } else {
-      recipeTitleToBeDisplayed = "";
-    }
+    if (this.state.recipe === undefined) { return <div></div>; }
+
+    // forces React to acknowledge newlines in user-submitted text
+    var innerHHTML = this.state.recipe.body.replace(/\n/g, "<br>");
 
     return(
       <div>
-        <div>Hai I'm the recipe detail!</div>
+        <div>Author name: {this.state.recipe.author_name}</div>
         <br></br>
-        <div>{recipeTitleToBeDisplayed}</div>
+        <div>{this.state.recipe.title}</div>
+        <br></br>
+        <div dangerouslySetInnerHTML={{__html: innerHHTML}}></div>
+        <br></br>
         <Link to="/">Back to All Recipes</Link>
       </div>
     );
