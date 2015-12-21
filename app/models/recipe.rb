@@ -5,4 +5,9 @@ class Recipe < ActiveRecord::Base
     class_name: "User",
     primary_key: :id,
     foreign_key: :author_id
+
+  has_many :annotations,
+    class_name: "Annotation",
+    primary_key: :recipe_id,
+    foreign_key: :id
 end

@@ -45,6 +45,4 @@ RecipeStore.__onDispatch = function (payload) {
   }
 };
 
-window.RecipeStore = RecipeStore;
-
 module.exports = RecipeStore;

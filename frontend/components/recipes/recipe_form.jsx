@@ -24,7 +24,7 @@ var RecipeForm = React.createClass({
   handleSubmit: function (e) {
     e.preventDefault();
     var recipe = {
-      // this refers to the comoponent (i.e. the form)
+      // this refers to the component (i.e. the form)
       title: this.state.title,
       body: this.state.body,
       image_url: this.state.image_url,

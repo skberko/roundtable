@@ -24,9 +24,9 @@
 * Notebook
 
 ### Actions
-* ApiActions.receiveAllNotebooks -> triggered by ApiUtil
-* ApiActions.receiveSingleNotebook
-* ApiActions.deleteNotebook
+* RecipeActions.receiveAllNotebooks -> triggered by ApiUtil
+* RecipeActions.receiveSingleNotebook
+* RecipeActions.deleteNotebook
 * NotebookActions.fetchAllNotebooks -> triggers ApiUtil
 * NotebookActions.fetchSingleNotebook
 * NotebookActions.createNotebook

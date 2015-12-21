@@ -17,9 +17,9 @@
 * Recipe
 
 ### Actions
-* ApiActions.receiveAllRecipes -> triggered by ApiUtil
-* ApiActions.receiveSingleRecipe
-* ApiActions.deleteRecipe
+* RecipeActions.receiveAllRecipes -> triggered by ApiUtil
+* RecipeActions.receiveSingleRecipe
+* RecipeActions.deleteRecipe
 * RecipeActions.fetchAllRecipes -> triggers ApiUtil
 * RecipeActions.fetchSingleRecipe
 * RecipeActions.createRecipe

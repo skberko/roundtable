@@ -12,6 +12,11 @@ class User < ActiveRecord::Base
     primary_key: :author_id,
     foreign_key: :id
 
+  has_many :annotations,
+    class_name: "Annotation",
+    primary_key: :author_id,
+    foreign_key: :id
+
 
   after_initialize :ensure_session_token
 

@@ -3,28 +3,34 @@ var ReactRouter = require('react-router');
 var RecipeStore = require('../../stores/recipe_store.js');
 var ApiUtil = require('../../util/api_util.js');
 var Link = ReactRouter.Link;
+var AnnotationStore = require('../../stores/annotation_store.js');
 
 
 var RecipeDetail = React.createClass({
 
   getStateFromStore: function () {
     // how does find work? takes an argument from the query string?
-    return { recipe: RecipeStore.find(parseInt(this.props.params.recipeId)) };
+    return RecipeStore.find(parseInt(this.props.params.recipeId));
   },
 
   getInitialState: function () {
-    return this.getStateFromStore();
+    return {recipe: this.getStateFromStore(),
+      annotations: []
+    };
   },
 
   componentDidMount: function () {
     // need to fetch recipe; and set listener on store for when recipe
     // actually arrives
     ApiUtil.fetchRecipe(this.props.params.recipeId);
+    ApiUtil.fetchAllAnnotations(this.props.params.recipeId);
     this.recipeListener = RecipeStore.addListener(this._onChange);
+    this.annotationListener = AnnotationStore.addListener(this._annotationChange);
   },
 
   componentWillUnmount: function () {
     this.recipeListener.remove();
+    this.annotationListener.remove();
   },
 
   // this is what enables the RecipeDetail page to change which recipe it is
@@ -33,26 +39,35 @@ var RecipeDetail = React.createClass({
   // to be triggered when the query string changes:
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchRecipe(newProps.params.recipeId);
+    ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
   },
 
   _onChange: function () {
-    this.setState(this.getStateFromStore());
+    this.setState({recipe: this.getStateFromStore()});
+  },
+
+  _annotationChange: function () {
+    this.setState({annotations: AnnotationStore.all()});
   },
 
   render: function () {
     if (this.state.recipe === undefined) { return <div></div>; }
 
-    // forces React to acknowledge newlines in user-submitted text
-    var innerHHTML = this.state.recipe.body.replace(/\n/g, "<br>");
-
     return(
-      <div>
+      <div className="speech-container">
         <div>Author name: {this.state.recipe.author_name}</div>
         <br></br>
         <div>{this.state.recipe.title}</div>
+        <article className="recipe-body">{this.state.recipe.body}</article>
         <br></br>
-        <div dangerouslySetInnerHTML={{__html: innerHHTML}}></div>
-        <br></br>
+        <div>
+          {this.state.annotations.map(function (annotation) {
+            return(<div key={annotation.id}>{annotation.body}</div>);
+          })}
+          <div>
+
+          </div>
+        </div>
         <Link to="/">Back to All Recipes</Link>
       </div>
     );

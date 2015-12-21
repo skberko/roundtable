@@ -11,6 +11,7 @@ var IndexRoute = ReactRouter.IndexRoute;
 var RecipesIndex = require('./components/recipes/recipes_index.jsx');
 var RecipeForm = require('./components/recipes/recipe_form.jsx');
 var RecipeDetail = require('./components/recipes/recipe_detail.jsx');
+var AnnotationStore = require('./stores/annotation_store.js');
 
 var App = React.createClass({
   render: function () {
@@ -27,5 +28,5 @@ var routes = (
   </Route>
 );
 
-// Router is always the route comoonent; routes below are its children
+// Router is always the route component; routes below are its children
 ReactDOM.render(<Router>{routes}</Router>, root);
