@@ -27,7 +27,6 @@ var RecipesIndex = React.createClass({
     return(
       <div>
         <ul>{this.state.recipes.map(function (recipe) {
-            debugger
           return(<RecipesIndexItem key={recipe.id} recipe={recipe}/>);
         })}</ul>
         <br/>

@@ -6,8 +6,5 @@ class Annotation < ActiveRecord::Base
     foreign_key: :author_id,
     primary_key: :id
 
-  belongs_to :step,
-    class_name: "Step",
-    foreign_key: :step_id,
-    primary_key: :id
+  belongs_to :step
 end

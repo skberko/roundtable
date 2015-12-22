@@ -3,8 +3,5 @@ class Step < ActiveRecord::Base
 
   belongs_to :recipe, inverse_of: :steps
 
-  has_many :annotations,
-    class_name: "Annotation",
-    primary_key: :annotation_id,
-    foreign_key: :id
+  has_many :annotations
 end
