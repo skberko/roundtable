@@ -55,19 +55,22 @@ var RecipeDetail = React.createClass({
 
     return(
       <div className="speech-container">
-        <div>Author name: {this.state.recipe.author_name}</div>
-        <br></br>
         <div>{this.state.recipe.title}</div>
+        <div>Submitted by: {this.state.recipe.author_name}</div>
+        <br></br>
+        Ingredients:
         <article className="recipe-ingredients">{this.state.recipe.ingredients}</article>
         <br></br>
         <div>
+          Steps:
           {this.state.recipe.steps.map(function (step) {
             return(<div key={step.id}>{step.body}</div>);
           })}
-          <div>
+        <div>
 
           </div>
         </div>
+        <br></br>
         <Link to="/">Back to All Recipes</Link>
       </div>
     );

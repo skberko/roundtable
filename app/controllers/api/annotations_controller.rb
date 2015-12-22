@@ -20,7 +20,7 @@ class Api::AnnotationsController < ApplicationController
 
   def index
     # see rake routes for expl of below:
-    @annotations = Annotation.where({recipe_id: params[:recipe_id]})
+    @annotations = Annotation.where({step_id: params[:step_id]})
   end
 
   private
