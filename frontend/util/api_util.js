@@ -38,14 +38,23 @@ var ApiUtil = {
     });
   },
 
-  fetchAllAnnotations: function (recipeId) {
+  fetchStepAnnotations: function (stepId) {
     $.ajax({
-      url: "api/recipes/" + recipeId + "/annotations",
+      url: "api/steps/" + stepId + "/annotations",
       success: function (annotations) {
         AnnotationActions.receiveAllAnnotations(annotations);
       }
     });
   },
+
+  // fetchAllAnnotations: function (recipeId) {
+  //   $.ajax({
+  //     url: "api/recipes/" + recipeId + "/annotations",
+  //     success: function (annotations) {
+  //       AnnotationActions.receiveAllAnnotations(annotations);
+  //     }
+  //   });
+  // },
 
   createAnnotation: function (annotation, callback) {
     $.ajax({

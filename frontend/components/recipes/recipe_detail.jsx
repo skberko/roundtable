@@ -23,7 +23,7 @@ var RecipeDetail = React.createClass({
     // need to fetch recipe; and set listener on store for when recipe
     // actually arrives
     ApiUtil.fetchRecipe(this.props.params.recipeId);
-    ApiUtil.fetchAllAnnotations(this.props.params.recipeId);
+    // ApiUtil.fetchAllAnnotations(this.props.params.recipeId);
     this.recipeListener = RecipeStore.addListener(this._onChange);
     this.annotationListener = AnnotationStore.addListener(this._annotationChange);
   },
@@ -39,7 +39,7 @@ var RecipeDetail = React.createClass({
   // to be triggered when the query string changes:
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchRecipe(newProps.params.recipeId);
-    ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
+    // ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
   },
 
   _onChange: function () {
