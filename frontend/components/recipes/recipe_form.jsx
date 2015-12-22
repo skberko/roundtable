@@ -27,7 +27,6 @@ var RecipeForm = React.createClass({
     e.preventDefault();
     this.state.steps.push({});
     this.setState({});
-    console.log("added step");
   },
 
   handleSubmit: function (e) {
@@ -80,6 +79,7 @@ var RecipeForm = React.createClass({
               };
 
               return(<textarea
+                key={i}
                 type="text"
                 id="recipe_steps"
                 valueLink={stepLink}

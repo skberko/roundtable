@@ -26,8 +26,8 @@ var ApiUtil = {
       url: "api/recipes",
       method: "POST",
       data: {recipe: recipe},
-      success: function () {
-        RecipeActions.receiveRecipe(recipe);
+      success: function (dbAddedRecipe) {
+        RecipeActions.receiveRecipe(dbAddedRecipe);
         callback && callback();
       },
       error: function (message) {
