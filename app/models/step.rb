@@ -1,10 +1,7 @@
 class Step < ActiveRecord::Base
-  validates :recipe_idx, :display_idx, :body, presence: true
+  validates :recipe, :display_idx, :body, presence: true
 
-  belongs_to :recipe,
-    class_name: "Recipe",
-    primary_key: :id,
-    foreign_key: :recipe_id
+  belongs_to :recipe, inverse_of: :steps
 
   has_many :annotations,
     class_name: "Annotation",

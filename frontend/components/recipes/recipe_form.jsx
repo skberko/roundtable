@@ -13,7 +13,8 @@ var RecipeForm = React.createClass({
 
   blankAttrs: {
     title: '',
-    body: '',
+    ingredients: '',
+    steps: [{}],
     image_url: ''
   },
 
@@ -21,12 +22,19 @@ var RecipeForm = React.createClass({
     return this.blankAttrs;
   },
 
+  handleTypeChange: function(i, stepBody) {
+    this.state.steps[i].body = stepBody;
+    this.state.steps[i].display_idx = i;
+    this.setState({ steps: this.state.steps });
+  },
+
   handleSubmit: function (e) {
     e.preventDefault();
     var recipe = {
       // this refers to the component (i.e. the form)
       title: this.state.title,
-      body: this.state.body,
+      ingredients: this.state.ingredients,
+      steps_attributes: this.state.steps,
       image_url: this.state.image_url,
       author_id: this.state.author_id
     };
@@ -40,6 +48,12 @@ var RecipeForm = React.createClass({
   },
 
   render: function () {
+
+    var stepLink = {
+      value: this.state.steps[0].body,
+      requestChange: this.handleTypeChange.bind(null, 0)
+    };
+
     return(
       <div>
         <form className="new-recipe" onSubmit={this.handleSubmit}>
@@ -52,11 +66,20 @@ var RecipeForm = React.createClass({
           </div>
 
           <div>
-            <label htmlFor="recipe_body">Directions (required):</label>
+            <label htmlFor="recipe_ingredients">Ingredients (required):</label>
             <textarea
               type="text"
-              id="recipe_body"d
-              valueLink={this.linkState("body")}
+              id="recipe_ingredients"
+              valueLink={this.linkState("ingredients")}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="recipe_steps">Steps (required):</label>
+            <textarea
+              type="text"
+              id="recipe_steps"
+              valueLink={stepLink}
             />
           </div>
 

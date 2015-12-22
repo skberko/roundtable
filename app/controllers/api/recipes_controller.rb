@@ -10,6 +10,7 @@ class Api::RecipesController < ApplicationController
     if @recipe.save
       render :show
     else
+      debugger
       render json: @recipe.errors.full_messages, status: 422
     end
   end
@@ -35,6 +36,6 @@ class Api::RecipesController < ApplicationController
   private
   def recipe_params
     # b/c steps are activerecord nested attributes inside recipes
-    params.require(:recipe).permit(:title, :ingredients, :step_attributes)
+    params.require(:recipe).permit(:title, :ingredients, :image_url, steps_attributes: [:body, :display_idx])
   end
 end

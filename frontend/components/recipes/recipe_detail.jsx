@@ -58,11 +58,11 @@ var RecipeDetail = React.createClass({
         <div>Author name: {this.state.recipe.author_name}</div>
         <br></br>
         <div>{this.state.recipe.title}</div>
-        <article className="recipe-body">{this.state.recipe.body}</article>
+        <article className="recipe-ingredients">{this.state.recipe.ingredients}</article>
         <br></br>
         <div>
-          {this.state.annotations.map(function (annotation) {
-            return(<div key={annotation.id}>{annotation.body}</div>);
+          {this.state.recipe.steps.map(function (step) {
+            return(<div key={step.id}>{step.body}</div>);
           })}
           <div>
 
