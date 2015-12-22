@@ -1,13 +1,13 @@
 class Annotation < ActiveRecord::Base
-  validates :recipe_id, :author_id, :body, :start_idx, :end_idx, presence: true
+  validates :author_id, :body, :step_id, presence: true
 
   belongs_to :author,
     class_name: "User",
     foreign_key: :author_id,
     primary_key: :id
 
-  belongs_to :recipe,
-    class_name: "Recipe",
-    foreign_key: :recipe_id,
+  belongs_to :step,
+    class_name: "Step",
+    foreign_key: :step_id,
     primary_key: :id
 end

@@ -34,6 +34,7 @@ class Api::RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.require(:recipe).permit(:title, :body)
+    # b/c steps are activerecord nested attributes inside recipes
+    params.require(:recipe).permit(:title, :ingredients, :step_attributes)
   end
 end

@@ -55,7 +55,7 @@ var RecipeForm = React.createClass({
             <label htmlFor="recipe_body">Directions (required):</label>
             <textarea
               type="text"
-              id="recipe_body"
+              id="recipe_body"d
               valueLink={this.linkState("body")}
             />
           </div>

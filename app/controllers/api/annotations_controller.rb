@@ -25,6 +25,6 @@ class Api::AnnotationsController < ApplicationController
 
   private
   def annotation_params
-    params.require(:annotation).permit(:body, :start_idx, :end_idx, :recipe_id)
+    params.require(:annotation).permit(:body, :step_id)
   end
 end
