@@ -7,19 +7,13 @@ var Link = ReactRouter.Link;
 var RecipeForm = React.createClass({
   mixins: [LinkedStateMixin],
 
-  // contextTypes: {
-  //   router: React.PropTypes.func
-  // },
-
-  blankAttrs: {
-    title: '',
-    ingredients: '',
-    steps: [{}],
-    image_url: ''
-  },
-
   getInitialState: function () {
-    return this.blankAttrs;
+    return {
+      title: '',
+      ingredients: '',
+      steps: [{}],
+      image_url: ''
+    };
   },
 
   handleTypeChange: function(i, stepBody) {
@@ -29,8 +23,10 @@ var RecipeForm = React.createClass({
   },
 
 
-  handleNewStep: function () {
+  handleNewStep: function (e) {
+    e.preventDefault();
     this.state.steps.push({});
+    this.setState({});
     console.log("added step");
   },
 
@@ -54,12 +50,6 @@ var RecipeForm = React.createClass({
   },
 
   render: function () {
-
-    var stepLink = {
-      value: this.state.steps[0].body,
-      requestChange: this.handleTypeChange.bind(null, 0)
-    };
-
     return(
       <div>
         <form className="new-recipe" onSubmit={this.handleSubmit}>
@@ -82,12 +72,20 @@ var RecipeForm = React.createClass({
 
           <div>
             <label htmlFor="recipe_steps">Steps (required):</label>
-            <textarea
-              type="text"
-              id="recipe_steps"
-              valueLink={stepLink}
-            />
-          <span onClick={this.handleNewStep}>Add New Step</span>
+
+            {this.state.steps.map(function (step, i) {
+              var stepLink = {
+                value: this.state.steps[i].body,
+                requestChange: this.handleTypeChange.bind(null, i)
+              };
+
+              return(<textarea
+                type="text"
+                id="recipe_steps"
+                valueLink={stepLink}
+              />);
+            }.bind(this))}
+            <button onClick={this.handleNewStep}>Add New Step</button>
           </div>
 
           <div>
