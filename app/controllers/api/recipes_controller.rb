@@ -10,7 +10,6 @@ class Api::RecipesController < ApplicationController
     if @recipe.save
       render :show
     else
-      debugger
       render json: @recipe.errors.full_messages, status: 422
     end
   end

@@ -28,6 +28,12 @@ var RecipeForm = React.createClass({
     this.setState({ steps: this.state.steps });
   },
 
+
+  handleNewStep: function () {
+    this.state.steps.push({});
+    console.log("added step");
+  },
+
   handleSubmit: function (e) {
     e.preventDefault();
     var recipe = {
@@ -81,6 +87,7 @@ var RecipeForm = React.createClass({
               id="recipe_steps"
               valueLink={stepLink}
             />
+          <span onClick={this.handleNewStep}>Add New Step</span>
           </div>
 
           <div>
