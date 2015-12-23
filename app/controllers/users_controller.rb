@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in(@user)
       # be careful about what to redirect to below:
-      redirect_to api_recipes_url
+      redirect_to root_url
     else
       flash.now[:errors] = @user.errors.full_messages
       render :new

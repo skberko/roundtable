@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user
       sign_in(user)
       # careful about where you redirect below:
-      redirect_to api_recipes_url
+      redirect_to root_url
     else
       flash.now[:errors] = ["Invalid username or password"]
       render :new

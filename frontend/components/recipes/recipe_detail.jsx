@@ -4,6 +4,7 @@ var RecipeStore = require('../../stores/recipe_store.js');
 var ApiUtil = require('../../util/api_util.js');
 var Link = ReactRouter.Link;
 var AnnotationStore = require('../../stores/annotation_store.js');
+var StepDetail = require('../steps/step_detail.jsx');
 
 
 var RecipeDetail = React.createClass({
@@ -39,7 +40,7 @@ var RecipeDetail = React.createClass({
   // to be triggered when the query string changes:
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchRecipe(newProps.params.recipeId);
-    // ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
+    ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
   },
 
   _onChange: function () {
@@ -64,7 +65,7 @@ var RecipeDetail = React.createClass({
         <div>
           Steps:
           {this.state.recipe.steps.map(function (step) {
-            return(<div key={step.id}>{step.body}</div>);
+            return(<StepDetail body={step.body} key={step.id}/>);
           })}
         <div>
 
