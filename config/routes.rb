@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: {format: :json} do
     resources :recipes, only: [:create, :destroy, :index, :show, :update]
-    resources :steps do
+    resources :steps, only: [:index] do
       resources :annotations, only: [:create, :show, :index]
     end
   end

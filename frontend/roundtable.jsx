@@ -6,12 +6,11 @@ var root = document.getElementById("root");
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
-//temp require ApiUtil so I can test fetchAllRecipes in console:
-// var ApiUtil = require('./util/api_util.js');
 var RecipesIndex = require('./components/recipes/recipes_index.jsx');
 var RecipeForm = require('./components/recipes/recipe_form.jsx');
 var RecipeDetail = require('./components/recipes/recipe_detail.jsx');
 var AnnotationStore = require('./stores/annotation_store.js');
+var StepDetail = require('./components/steps/step_detail.jsx');
 
 var App = React.createClass({
   render: function () {
@@ -24,7 +23,9 @@ var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={RecipesIndex}/>
     <Route path="recipes/new" component={RecipeForm}/>
-    <Route path="recipes/:recipeId" component={RecipeDetail}/>
+    <Route path="recipes/:recipeId" component={RecipeDetail}>
+      <Route path="steps/:stepId" component={StepDetail}/>
+    </Route>
   </Route>
 );
 

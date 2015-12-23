@@ -1,5 +1,6 @@
 var RecipeActions = require('../actions/recipe_actions.js');
 var AnnotationActions = require('../actions/annotation_actions.js');
+var StepActions = require('../actions/step_actions.js');
 
 var ApiUtil = {
   fetchAllRecipes: function () {
@@ -34,6 +35,18 @@ var ApiUtil = {
         alert("All required fields must be complete!");
         // console.log(message);
         // err && err();
+      }
+    });
+  },
+
+  fetchStepsForRecipe: function (recipeId) {
+    $.ajax({
+      url: "api/steps/",
+      dataType: "json",
+      data: {recipeId: recipeId},
+      success: function (steps) {
+        console.log(steps)
+        StepActions.receiveSteps(steps);
       }
     });
   },

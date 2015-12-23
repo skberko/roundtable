@@ -40,7 +40,12 @@ var RecipeDetail = React.createClass({
   // to be triggered when the query string changes:
   componentWillReceiveProps: function (newProps) {
     ApiUtil.fetchRecipe(newProps.params.recipeId);
-    ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
+    // ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
+  },
+
+  goToStepDetailPage: function (stepId) {
+    var url = '/recipes/' + this.props.params.recipeId + '/steps/' + stepId;
+    this.props.history.pushState(null, url);
   },
 
   _onChange: function () {
@@ -62,17 +67,16 @@ var RecipeDetail = React.createClass({
         Ingredients:
         <article className="recipe-ingredients">{this.state.recipe.ingredients}</article>
         <br></br>
-        <div>
+        <ul>
           Steps:
           {this.state.recipe.steps.map(function (step) {
-            return(<StepDetail body={step.body} key={step.id}/>);
-          })}
-        <div>
-
-          </div>
-        </div>
+            // passes in body as a prop to the StepDetail:
+            return(<li  key={step.id} onClick={this.goToStepDetailPage.bind(null, step.id)}>{step.body}</li>);
+          }.bind(this))}
+        </ul>
         <br></br>
         <Link to="/">Back to All Recipes</Link>
+        {this.props.children}
       </div>
     );
   }

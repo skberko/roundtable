@@ -20,7 +20,6 @@ var resetRecipe = function (recipe) {
 };
 
 RecipeStore.all = function () {
-  // console.log(_recipes);
   var recipes = [];
   for (var id in _recipes) {
     if (_recipes.hasOwnProperty(id)) {
