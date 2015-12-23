@@ -22,6 +22,10 @@ var StepDetail = React.createClass({
     this.stepListener = StepStore.addListener(this._onChange);
   },
 
+  componentWillUnmount: function () {
+    this.stepListener.remove();
+  },
+
   render: function () {
     var step = this.getStepFromStore() || this.state.step;
 
