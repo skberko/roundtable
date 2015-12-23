@@ -29,8 +29,11 @@ var StepDetail = React.createClass({
     var step = this.getStepFromStore() || this.state.step;
     if (step === null) { return <div></div>; }
     return(
-      <div>{step.annotations[0].body}
-      </div>
+      <ul>
+        <li>{step.annotations[0].body}</li>
+        <li>{step.annotations[0].author_name}</li>
+        <br></br>
+      </ul>
     );
   }
 
