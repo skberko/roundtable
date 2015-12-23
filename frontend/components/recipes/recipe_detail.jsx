@@ -44,6 +44,7 @@ var RecipeDetail = React.createClass({
   },
 
   goToStepDetailPage: function (stepId) {
+    // console.log("stepId is: " + stepId);
     var url = '/recipes/' + this.props.params.recipeId + '/steps/' + stepId;
     this.props.history.pushState(null, url);
   },
@@ -67,13 +68,13 @@ var RecipeDetail = React.createClass({
         Ingredients:
         <article className="recipe-ingredients">{this.state.recipe.ingredients}</article>
         <br></br>
-        <ul>
+        <ol>
           Steps:
           {this.state.recipe.steps.map(function (step) {
             // passes in body as a prop to the StepDetail:
             return(<li  key={step.id} onClick={this.goToStepDetailPage.bind(null, step.id)}>{step.body}</li>);
           }.bind(this))}
-        </ul>
+        </ol>
         <br></br>
         <Link to="/">Back to All Recipes</Link>
         {this.props.children}

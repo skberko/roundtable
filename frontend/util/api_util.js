@@ -45,7 +45,7 @@ var ApiUtil = {
       dataType: "json",
       data: {recipeId: recipeId},
       success: function (steps) {
-        console.log(steps)
+        console.log(steps);
         StepActions.receiveSteps(steps);
       }
     });

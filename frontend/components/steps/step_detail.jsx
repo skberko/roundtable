@@ -17,7 +17,6 @@ var StepDetail = React.createClass({
   },
 
   componentDidMount: function(){
-    // ?
     ApiUtil.fetchStepsForRecipe(this.props.params.recipeId);
     this.stepListener = StepStore.addListener(this._onChange);
   },
@@ -28,14 +27,14 @@ var StepDetail = React.createClass({
 
   render: function () {
     var step = this.getStepFromStore() || this.state.step;
-
     if (step === null) { return <div></div>; }
-
-    return(<div>{step.body}</div>
+    return(
+      <div>{step.annotations[0].body}
+      </div>
     );
   }
 
-  // make external anno form component, include it here
+  // make external annotation form component, include it here
 });
 
 module.exports = StepDetail;
