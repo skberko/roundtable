@@ -30,7 +30,8 @@ var AnnotationForm = React.createClass({
     ApiUtil.createAnnotation(annotation, returnToRegularRecipeView.bind(this));
   },
 
-  
+  render: function () {
+  }
 
 });
 
