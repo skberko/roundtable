@@ -69,9 +69,9 @@ var ApiUtil = {
   //   });
   // },
 
-  createAnnotation: function (annotation, callback) {
+  createAnnotation: function (annotation, stepId, callback) {
     $.ajax({
-      url: "api/annotations",
+      url: "api/steps/" + stepId + "/annotations",
       method: "POST",
       data: {annotation: annotation},
       success: function () {
@@ -82,7 +82,7 @@ var ApiUtil = {
         callback && callback();
       },
       error: function (message) {
-        alert("All required fields must be complete!");
+        alert("Your annotation can't be blank!");
       }
     });
   }

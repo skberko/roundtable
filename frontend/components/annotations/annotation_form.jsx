@@ -15,23 +15,37 @@ var AnnotationForm = React.createClass({
     return this.blankAttrs;
   },
 
+// need to modify where this info comes from; testing on pizza step 1 for now:
   handleSubmit: function (e) {
+
     e.preventDefault();
     var annotation = {
       body: this.state.body,
-      start_idx: this.state.start_idx,
-      end_idx: this.state.end_idx,
-      author_id: this.state.author_id,
-      recipe_id: this.state.recipe_id
+      step_id: this.props.stepId
     };
     var returnToRegularRecipeView = function () {
       // should be callback to be passed into ApiUtil.createAnnotation
     };
-    ApiUtil.createAnnotation(annotation, returnToRegularRecipeView.bind(this));
+    ApiUtil.createAnnotation(annotation, annotation.step_id, returnToRegularRecipeView.bind(this));
   },
 
   render: function () {
-    return(<div>I'm the annotation form!</div>);
+    return(
+      <div>
+        <form className="new-annotation"onSubmit={this.handleSubmit}>
+
+          <div>
+            <label htmlFor="annotation_body">Whatcha got to say?</label>
+            <input
+              type="text"
+              id="annotation_body"
+              valueLink={this.linkState("body")}/>
+          </div>
+
+          <input type="submit" value="Add Annotation!"></input>
+        </form>
+      </div>
+    );
   }
 
 });
