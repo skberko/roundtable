@@ -55,7 +55,7 @@ var ApiUtil = {
     $.ajax({
       url: "api/steps/" + stepId + "/annotations",
       success: function (annotations) {
-        AnnotationActions.receiveAllAnnotations(annotations);
+        AnnotationActions.receiveStepAnnotations(annotations);
       }
     });
   },

@@ -3,9 +3,9 @@ var AnnotationConstants = require('../constants/annotation_constants.js');
 
 var AnnotationActions = {
 
-  receiveAllAnnotations: function (annotations) {
+  receiveStepAnnotations: function (annotations) {
     Dispatcher.dispatch({
-      actionType: AnnotationConstants.ANNOTATIONS_RECEIVED,
+      actionType: AnnotationConstants.STEP_ANNOTATIONS_RECEIVED,
       annotations: annotations
     });
   },
