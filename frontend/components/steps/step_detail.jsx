@@ -28,6 +28,8 @@ var StepDetail = React.createClass({
   render: function () {
     var step = this.getStepFromStore() || this.state.step;
     if (step === null) { return <div></div>; }
+    if (step.annotations.length === 0) { return <div></div>; }
+      
     return(
       <ul>
         <li>{step.annotations[0].body}</li>
