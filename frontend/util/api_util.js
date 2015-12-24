@@ -50,14 +50,14 @@ var ApiUtil = {
     });
   },
 
-  fetchStepAnnotations: function (stepId) {
-    $.ajax({
-      url: "api/steps/" + stepId + "/annotations",
-      success: function (annotations) {
-        AnnotationActions.receiveStepAnnotations(annotations);
-      }
-    });
-  },
+  // fetchStepAnnotations: function (stepId) {
+  //   $.ajax({
+  //     url: "api/steps/" + stepId + "/annotations",
+  //     success: function (annotations) {
+  //       AnnotationActions.receiveStepAnnotations(annotations);
+  //     }
+  //   });
+  // },
 
   createAnnotation: function (annotation, stepId, callback) {
     $.ajax({
@@ -65,10 +65,6 @@ var ApiUtil = {
       method: "POST",
       data: {annotation: annotation},
       success: function (newAnnotation) {
-        AnnotationActions.receiveAnnotation(newAnnotation);
-        // callback will be for something like if I want to return to regular
-        // recipe view after adding a new annotation - to be done in the
-        // annotation form view!
         callback && callback();
       },
       error: function (message) {

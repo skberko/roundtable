@@ -3,7 +3,6 @@ var ReactRouter = require('react-router');
 var RecipeStore = require('../../stores/recipe_store.js');
 var ApiUtil = require('../../util/api_util.js');
 var Link = ReactRouter.Link;
-var AnnotationStore = require('../../stores/annotation_store.js');
 var StepDetail = require('../steps/step_detail.jsx');
 
 
@@ -50,6 +49,7 @@ var RecipeDetail = React.createClass({
   _onChange: function () {
     this.setState({recipe: this.getStateFromStore()});
   },
+
 
   render: function () {
     if (this.state.recipe === undefined) { return <div></div>; }

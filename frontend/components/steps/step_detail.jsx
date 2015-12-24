@@ -39,7 +39,7 @@ var StepDetail = React.createClass({
       return (
         <div>
           <div>No annotations yet!</div>
-          <AnnotationForm stepId={this.state.step.id}/>
+          <AnnotationForm stepId={this.state.step.id} recipeId={this.props.params.recipeId}/>
         </div>
       );
     }
@@ -58,7 +58,7 @@ var StepDetail = React.createClass({
         })}
         </ul>
         <br></br>
-        <AnnotationForm stepId={this.state.step.id}/>
+        <AnnotationForm stepId={this.state.step.id} recipeId={this.props.params.recipeId}/>
       </div>
     );
   }

@@ -23,11 +23,11 @@ var AnnotationForm = React.createClass({
       body: this.state.body,
       step_id: this.props.stepId
     };
-    var updateStepAnnotationsView = function () {
+    var updateStepDetail = function () {
       // should be callback to be passed into ApiUtil.createAnnotation
-
+      ApiUtil.fetchStepsForRecipe(this.props.recipeId);
     };
-    ApiUtil.createAnnotation(annotation, annotation.step_id, updateStepAnnotationsView.bind(this));
+    ApiUtil.createAnnotation(annotation, annotation.step_id, updateStepDetail.bind(this));
   },
 
   render: function () {
