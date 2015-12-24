@@ -13,7 +13,7 @@ rerun.txt
 pickle-email-*.html
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
-
+!secrets.yml
 
 ## Environment normalization:
 /.bundle
