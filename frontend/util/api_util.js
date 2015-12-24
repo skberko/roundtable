@@ -60,15 +60,6 @@ var ApiUtil = {
     });
   },
 
-  // fetchAllAnnotations: function (recipeId) {
-  //   $.ajax({
-  //     url: "api/recipes/" + recipeId + "/annotations",
-  //     success: function (annotations) {
-  //       AnnotationActions.receiveAllAnnotations(annotations);
-  //     }
-  //   });
-  // },
-
   createAnnotation: function (annotation, stepId, callback) {
     $.ajax({
       url: "api/steps/" + stepId + "/annotations",
@@ -89,7 +80,7 @@ var ApiUtil = {
 
 };
 
-// require in window to test ajax requestzzz:
+// require in window to test ajax requests:
 window.ApiUtil = ApiUtil;
 
 module.exports = ApiUtil;
