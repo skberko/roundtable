@@ -26,8 +26,14 @@ var StepDetail = React.createClass({
     this.stepListener.remove();
   },
 
+  componentWillReceiveProps: function (newProps) {
+    var newStepId = newProps.params.stepId;
+    this.setState({step: StepStore.find(newStepId)});
+  },
+
   render: function () {
-    var step = this.getStepFromStore() || this.state.step;
+    // var step = this.getStepFromStore() || this.state.step;
+    var step = this.state.step;
     if (step === null) { return <div></div>; }
     if (step.annotations.length === 0) {
       return (

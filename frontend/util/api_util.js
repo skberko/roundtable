@@ -45,7 +45,6 @@ var ApiUtil = {
       dataType: "json",
       data: {recipeId: recipeId},
       success: function (steps) {
-        console.log(steps);
         StepActions.receiveSteps(steps);
       }
     });
@@ -65,8 +64,8 @@ var ApiUtil = {
       url: "api/steps/" + stepId + "/annotations",
       method: "POST",
       data: {annotation: annotation},
-      success: function () {
-        AnnotationActions.receiveAnnotation(annotation);
+      success: function (newAnnotation) {
+        AnnotationActions.receiveAnnotation(newAnnotation);
         // callback will be for something like if I want to return to regular
         // recipe view after adding a new annotation - to be done in the
         // annotation form view!

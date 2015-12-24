@@ -26,12 +26,10 @@ var RecipeDetail = React.createClass({
     ApiUtil.fetchRecipe(this.props.params.recipeId);
     // ApiUtil.fetchAllAnnotations(this.props.params.recipeId);
     this.recipeListener = RecipeStore.addListener(this._onChange);
-    this.annotationListener = AnnotationStore.addListener(this._annotationChange);
   },
 
   componentWillUnmount: function () {
     this.recipeListener.remove();
-    this.annotationListener.remove();
   },
 
   // this is what enables the RecipeDetail page to change which recipe it is
@@ -51,10 +49,6 @@ var RecipeDetail = React.createClass({
 
   _onChange: function () {
     this.setState({recipe: this.getStateFromStore()});
-  },
-
-  _annotationChange: function () {
-    this.setState({annotations: AnnotationStore.all()});
   },
 
   render: function () {
