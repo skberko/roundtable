@@ -2,7 +2,7 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var ApiUtil = require('../../util/api_util.js');
 var StepStore = require('../../stores/step_store.js');
-// var AnnotationForm = require('../annotations/annotation_form.jsx');
+var AnnotationForm = require('../annotations/annotation_form.jsx');
 
 var StepDetail = React.createClass({
   getInitialState: function(){
@@ -29,7 +29,14 @@ var StepDetail = React.createClass({
   render: function () {
     var step = this.getStepFromStore() || this.state.step;
     if (step === null) { return <div></div>; }
-    if (step.annotations.length === 0) { return <div></div>; }
+    if (step.annotations.length === 0) {
+      return (
+        <div>
+          <div>No annotations yet!</div>
+          <AnnotationForm/>
+        </div>
+      );
+    }
 
     return(
       <div>
@@ -44,6 +51,8 @@ var StepDetail = React.createClass({
           );
         })}
         </ul>
+        <br></br>
+        <AnnotationForm/>
       </div>
     );
   }

@@ -31,6 +31,7 @@ var AnnotationForm = React.createClass({
   },
 
   render: function () {
+    return(<div>I'm the annotation form!</div>);
   }
 
 });
