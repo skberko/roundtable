@@ -29,17 +29,36 @@ var StepDetail = React.createClass({
     var step = this.getStepFromStore() || this.state.step;
     if (step === null) { return <div></div>; }
     if (step.annotations.length === 0) { return <div></div>; }
-      
+
+    // return(
+    //   <ul>
+    //     <li>{step.annotations[1].body}</li>
+    //     <li>by: {step.annotations[1].author_name}</li>
+    //     <br></br>
+    //   </ul>
+    // );
+
     return(
-      <ul>
-        <li>{step.annotations[0].body}</li>
-        <li>{step.annotations[0].author_name}</li>
-        <br></br>
-      </ul>
+      <div>
+        <p>Annotations:</p>
+        <ul>{step.annotations.map(function (annotation) {
+          return(
+            <div>
+              <div>{annotation.body}</div>
+              <div>by: {annotation.author_name}</div>
+              <br></br>
+            </div>
+          );
+        })}
+
+        </ul>
+      </div>
     );
   }
 
-  // make external annotation form component, include it here
+  // goal is to create StepAnnotations component, which will contain:
+  // 1) iterated list of all annotations associated with the step
+  // 2) form for creating new annotation associated with the step
 });
 
 module.exports = StepDetail;
