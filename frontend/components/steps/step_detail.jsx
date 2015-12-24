@@ -45,7 +45,7 @@ var StepDetail = React.createClass({
           return(
             <div>
               <div>{annotation.body}</div>
-              <div>by: {annotation.author_name}</div>
+              <div>by: {annotation.author_name} at: {annotation.created_at}</div>
               <br></br>
             </div>
           );
