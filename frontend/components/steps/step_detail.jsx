@@ -30,14 +30,6 @@ var StepDetail = React.createClass({
     if (step === null) { return <div></div>; }
     if (step.annotations.length === 0) { return <div></div>; }
 
-    // return(
-    //   <ul>
-    //     <li>{step.annotations[1].body}</li>
-    //     <li>by: {step.annotations[1].author_name}</li>
-    //     <br></br>
-    //   </ul>
-    // );
-
     return(
       <div>
         <p>Annotations:</p>
