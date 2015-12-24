@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'annotate'
+gem 'rails_12factor'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
