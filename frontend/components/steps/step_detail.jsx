@@ -43,7 +43,7 @@ var StepDetail = React.createClass({
         <p>Annotations:</p>
         <ul>{step.annotations.map(function (annotation) {
           return(
-            <div>
+            <div key={annotation.id}>
               <div>{annotation.body}</div>
               <div>by: {annotation.author_name} at: {annotation.created_at}</div>
               <br></br>
