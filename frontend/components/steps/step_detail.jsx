@@ -45,7 +45,7 @@ var StepDetail = React.createClass({
     }
 
     return(
-      <div>
+      <div className="step-detail-box">
         <p>Annotations:</p>
         <ul>{step.annotations.map(function (annotation) {
           return(

@@ -40,3 +40,65 @@
   background-repeat: no-repeat;
   text-shadow: 1px 1px black;
 }
+
+// div.speech-container{
+//   width: 50%;
+//   float: left;
+//   margin-left: 10%;
+//   border-left: 1px solid white;
+//   padding-left: 3%;
+// }
+
+// Recipe detail:
+
+.recipe-detail-container {
+  width: 95%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  float: left;
+  padding: 3%;
+  border: 1px solid black;
+}
+
+.recipe-title {
+  font-size: 150%;
+  margin: 0% 0% 1% 0%
+}
+
+.recipe-author-info {
+  font-size: 100%;
+  margin: 0% 0% 8% 0%
+}
+
+.recipe-ingredients-label {
+  font-size: 120%;
+}
+
+.recipe-ingredients {
+  white-space: pre-wrap;
+  font-size: 100%;
+  margin: 1% 0% 1% 1%;
+}
+
+.recipe-steps-box {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0% 0% 5% 0%;
+}
+
+.recipe-steps {
+  white-space: pre-wrap;
+}
+
+.recipe-index-link {
+  border: 1px solid black;
+  margin: 0% 0% 0% 0%;
+}
+
+// step detail (i.e. list of annotations)
+.step-detail-box {
+  // position: relative;
+  // left: 400px;
+  // width: 400px;
+  // top: 10%;
+}

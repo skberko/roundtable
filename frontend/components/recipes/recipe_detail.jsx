@@ -55,23 +55,29 @@ var RecipeDetail = React.createClass({
     if (this.state.recipe === undefined) { return <div></div>; }
 
     return(
-      <div className="speech-container">
-        <div>{this.state.recipe.title}</div>
-        <div>Submitted by: {this.state.recipe.author_name}</div>
-        <br></br>
-        Ingredients:
+      <div className="recipe-detail-container">
+
+        <div className="recipe-title">{this.state.recipe.title}</div>
+        <div className="recipe-author-info">Submitted by: {this.state.recipe.author_name}</div>
+        <div className="recipe-ingredients-label">Ingredients:</div>
         <article className="recipe-ingredients">{this.state.recipe.ingredients}</article>
-        <br></br>
-        <ol>
-          Steps:
-          {this.state.recipe.steps.map(function (step) {
-            // passes in body as a prop to the StepDetail:
-            return(<li  key={step.id} onClick={this.goToStepDetailPage.bind(null, step.id)}>{step.body}</li>);
-          }.bind(this))}
-        </ol>
-        <br></br>
-        <Link to="/">Back to All Recipes</Link>
-        {this.props.children}
+
+        <div className="recipe-steps-box">
+          <div>Steps:</div>
+          <ol>
+            {this.state.recipe.steps.map(function (step) {
+              // passes in body as a prop to the StepDetail:
+              return(<li  key={step.id} onClick={this.goToStepDetailPage.bind(null, step.id)}>{step.body}</li>);
+            }.bind(this))}
+          </ol>
+          <br></br>
+
+          {this.props.children}
+        </div>
+
+        <div className="recipe-index-link">
+          <Link to="/">Back to All Recipes</Link>
+        </div>
       </div>
     );
   }
