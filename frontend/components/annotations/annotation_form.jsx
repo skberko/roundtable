@@ -28,6 +28,7 @@ var AnnotationForm = React.createClass({
       ApiUtil.fetchStepsForRecipe(this.props.recipeId);
     };
     ApiUtil.createAnnotation(annotation, annotation.step_id, updateStepDetail.bind(this));
+    this.setState(this.blankAttrs);
   },
 
   render: function () {
