@@ -37,7 +37,7 @@ var StepDetail = React.createClass({
     if (step === null) { return <div></div>; }
     if (step.annotations.length === 0) {
       return (
-        <div>
+        <div className="step-detail-box">
           <div>No annotations yet!</div>
           <AnnotationForm stepId={this.state.step.id} recipeId={this.props.params.recipeId}/>
         </div>
