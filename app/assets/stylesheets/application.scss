@@ -49,6 +49,16 @@
 //   padding-left: 3%;
 // }
 
+// Recipe form
+.form-no-image {
+  border: 1px solid black;
+  margin: 2%;
+}
+
+.uploaded-form-image {
+  margin: 2%;
+}
+
 // Recipe detail:
 
 .recipe-detail-container {
@@ -68,6 +78,10 @@
 .recipe-author-info {
   font-size: 100%;
   margin: 0% 0% 8% 0%
+}
+
+.recipe-image {
+  
 }
 
 .recipe-ingredients-label {

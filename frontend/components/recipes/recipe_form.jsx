@@ -33,9 +33,8 @@ var RecipeForm = React.createClass({
     e.preventDefault();
     cloudinary.openUploadWidget({cloud_name: "", upload_preset: ""}, function(error, results){
       if(!error){
-        // debugger
         // this.props.postImage(results[0]);
-        this.setState({ publicId: results[0].public_id });
+        this.setState({ image_url: results[0].public_id });
       }
     }.bind(this));
   },
@@ -47,7 +46,7 @@ var RecipeForm = React.createClass({
       title: this.state.title,
       ingredients: this.state.ingredients,
       steps_attributes: this.state.steps,
-      image_url: this.state.publicId,
+      image_url: this.state.image_url,
       author_id: this.state.author_id,
     };
     var returnToIndexCallback = function () {
@@ -60,8 +59,14 @@ var RecipeForm = React.createClass({
   },
 
   render: function () {
-    var stockPhotoURL =
-      "http://res.cloudinary.com/dz5btfj9w/image/upload/e_grayscale/v1451366140/cutting_board_gddf1k.jpg";
+
+    if (this.state.image_url === '') {
+      var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_90,h_90/" + "no-image_fjw1vh";
+      var photoClass = "form-no-image";
+    } else {
+      photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_90,h_90/" + this.state.image_url;
+      photoClass = "uploaded-form-image";
+    }
 
     return(
       <div>
@@ -105,7 +110,7 @@ var RecipeForm = React.createClass({
           <div>
             <button onClick={this.uploadImage}>Upload new image!</button>
           </div>
-          <img src = {stockPhotoURL}></img>
+          <img className={photoClass} src = {photoUrl}></img>
 
 
 
