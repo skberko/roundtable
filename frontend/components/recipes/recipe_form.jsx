@@ -29,6 +29,17 @@ var RecipeForm = React.createClass({
     this.setState({});
   },
 
+  uploadImage: function (e) {
+    e.preventDefault();
+    cloudinary.openUploadWidget({cloud_name: "", upload_preset: ""}, function(error, results){
+      if(!error){
+        // debugger
+        // this.props.postImage(results[0]);
+        this.setState({ publicId: results[0].public_id });
+      }
+    }.bind(this));
+  },
+
   handleSubmit: function (e) {
     e.preventDefault();
     var recipe = {
@@ -36,8 +47,8 @@ var RecipeForm = React.createClass({
       title: this.state.title,
       ingredients: this.state.ingredients,
       steps_attributes: this.state.steps,
-      image_url: this.state.image_url,
-      author_id: this.state.author_id
+      image_url: this.state.publicId,
+      author_id: this.state.author_id,
     };
     var returnToIndexCallback = function () {
       // pushState is a history method
@@ -49,6 +60,9 @@ var RecipeForm = React.createClass({
   },
 
   render: function () {
+    var stockPhotoURL =
+      "http://res.cloudinary.com/dz5btfj9w/image/upload/e_grayscale/v1451366140/cutting_board_gddf1k.jpg";
+
     return(
       <div>
         <form className="new-recipe" onSubmit={this.handleSubmit}>
@@ -89,13 +103,11 @@ var RecipeForm = React.createClass({
           </div>
 
           <div>
-            <label htmlFor="recipe_image_url">Photo URL:</label>
-            <input
-              type="text"
-              id="recipe_image_url"
-              valueLink={this.linkState("image_url")}
-            />
+            <button onClick={this.uploadImage}>Upload new image!</button>
           </div>
+          <img src = {stockPhotoURL}></img>
+
+
 
           <input type="submit" value="Add Recipe!"></input>
           <br/>
@@ -108,3 +120,10 @@ var RecipeForm = React.createClass({
 });
 
 module.exports = RecipeForm;
+
+// <label htmlFor="recipe_image_url">Photo URL:</label>
+// <input
+//   type="text"
+//   id="recipe_image_url"
+//   valueLink={this.linkState("image_url")}
+// />

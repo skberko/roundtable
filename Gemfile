@@ -5,6 +5,7 @@ gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'annotate'
 gem 'rails_12factor'
+gem 'figaro'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
