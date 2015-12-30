@@ -11,6 +11,7 @@ var SignOut = React.createClass({
   },
 
 
+
   render: function() {
     return(
         <button className="btn btn-primary navbar-btn button-md pull-right"
@@ -26,7 +27,6 @@ var NavBar = React.createClass({
 
 
   render: function () {
-
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
