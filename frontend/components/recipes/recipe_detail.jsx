@@ -54,7 +54,7 @@ var RecipeDetail = React.createClass({
   render: function () {
     if (this.state.recipe === undefined) { return <div></div>; }
 
-    var imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_150,h_150/" + this.state.recipe.image_url;
+    var imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_150/" + this.state.recipe.image_url;
 
     return(
       <div className="recipe-detail-container">

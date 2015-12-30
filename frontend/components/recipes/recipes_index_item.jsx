@@ -12,7 +12,7 @@ var History = require('react-router').History;
       if (this.props.recipe.image_url === '') {
         var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + "no-image_fjw1vh";
       } else {
-        photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + this.props.recipe.image_url;
+        photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_200/" + this.props.recipe.image_url;
       }
       // debugger
 
