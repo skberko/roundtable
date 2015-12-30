@@ -12,7 +12,8 @@ var RecipeForm = React.createClass({
       title: '',
       ingredients: '',
       steps: [{}],
-      image_url: ''
+      image_url: '',
+      description: ''
     };
   },
 
@@ -48,6 +49,7 @@ var RecipeForm = React.createClass({
       steps_attributes: this.state.steps,
       image_url: this.state.image_url,
       author_id: this.state.author_id,
+      description: this.state.description
     };
     var returnToIndexCallback = function () {
       // pushState is a history method
@@ -77,6 +79,15 @@ var RecipeForm = React.createClass({
               type="text"
               id="recipe_title"
               valueLink={this.linkState("title")}/>
+          </div>
+
+          <div>
+            <label htmlFor="recipe_description">Description (required):</label>
+            <textarea
+              type="text"
+              id="recipe_description"
+              valueLink={this.linkState("description")}
+            />
           </div>
 
           <div>

@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Recipe.create!([
+  {author_id: 1, title: "Fish-Fragrant Eggplant", ingredients: "1 1/4 lbs (600g) eggplant \nSalt \nCooking oil, for deep-frying (1 1/2 cups plus 2 tablespoons/400ml will do if you are using a round-bottomed wok) \n1 1/2 tablespoons Sichuanese chilli bean paste, or Sichuan pickled chilli paste, or a mixture of the two\n1 tablespoon finely chopped ginger \n1 tablespoon finely chopped garlic \n2/3 cup (150ml) chicken stock \n2 teaspoons sugar \n3/4 teaspoon potato flour mixed with one tablespoon cold water \n2 teaspoons Chinkiang vinegar \n4 tablespoons finely sliced spring onion greens", image_url: "fish_fragrant_eggplant_qsnivd", description: "This is a classic Sichuan-style Chinese eggplant dish. The name is a little strange, as there is no actual fish (or fish favor!) in it, but it will appeal to eggplant and garlic lovers alike."},
+  {author_id: 1, title: "Sour Cream Cornbread With Aleppo", ingredients: "1 cup (125 grams) all-purpose flour\n1 cup (145 grams) yellow cornmeal\n2 tablespoon (25 grams) granulated sugar\n2 teaspoons baking powder\n1 teaspoon dried aleppo flakes\n1/2 teaspoon table salt\n1 large egg, lightly beaten\n1 cup sour cream\n1/3 cup buttermilk\n2 tablespoons olive oil", image_url: "dwfolszdsrjeeabhoxz1", description: "A savory, slightly spicy take on classic cornbread inspired by Smitten Kitchen. Aleppo is a Turkish pepper flake - in a pinch, you can substitute regular red paper flakes, though be careful things don’t get too hot!"},
+  {author_id: 2, title: "Kugel", ingredients: "1 (8 ounce) package large egg noodles \n6 tablespoons butter, sliced \n6 eggs, separated \n1/2 cup white sugar \n3/4 (8 ounce) package cream cheese, softened \n4 tablespoons sour cream \n1 (16 ounce) package cottage cheese, creamed \n1 pinch salt \n4 tablespoons butter, melted \n1/4 cup white sugar \n1/3 cup graham cracker crumbs", image_url: "paea26zzrnmxqilqpvwy", description: "Kugel is a traditional Jewish dish most often eaten at Saturday lunches or on holidays. It can be sweet or savory, though this version is a bit of both. It would be hard to argue that kugel is particularly healthy, but it’s so delicious that it’s best not to think too hard about that!"}
+])
+Step.create!([
+  {recipe_id: 1, display_idx: 0, body: "Cut the eggplant lengthways into three thick slices, then cut these into evenly sized batons. Sprinkle them with salt, mix well and leave in a colander for at least 30 minutes to drain. "},
+  {recipe_id: 1, display_idx: 1, body: "n a wok, heat the oil for deep-frying to 350°F (180˚C). Add the eggplant in batches and deep-fry for three to four minutes until slightly golden on the outside and soft and buttery within. Remove and drain on paper towels."},
+  {recipe_id: 1, display_idx: 2, body: "Drain the deep-frying oil, rinse the wok if necessary, then return it to a medium flame. When the wok is hot again, add 3 tbsp of oil. Add the chilli bean paste and stir-fry until the oil is red and fragrant, then add the ginger and garlic and continue to stir-fry until you can smell their aromas. Take care not to burn these seasonings; remove the wok from the heat for a few seconds if necessary to control the temperature (you want a gentle, coaxing sizzle, not a scorching heat)."},
+  {recipe_id: 1, display_idx: 3, body: "Add the stock and sugar and mix well. Season with salt to taste if necessary. Add the fried eggplant to the sauce and let them simmer gently for a minute or so to absorb some of the flavors. Then stir the potato flour mixture, pour it over the eggplant and stir in gently to thicken the sauce. Add the vinegar and spring onions and stir a few times, then serve."},
+  {recipe_id: 2, display_idx: 0, body: "Preheat the oven to 400 °F. Generously butter a 9×5-inch loaf pan, or coat it with a nonstick spray."},
+  {recipe_id: 2, display_idx: 1, body: "Whisk flour, cornmeal, sugar, baking powder, aleppo and salt together in a large bowl. In a smaller bowl, whisk together the egg, sour cream, buttermilk and olive oil."},
+  {recipe_id: 2, display_idx: 2, body: "Stir the wet ingredients into the dry ones, mixing until just barely combined."},
+  {recipe_id: 2, display_idx: 3, body: "Spread the batter in your prepared and bake for 22 to 25 minutes. A toothpick inserted into the center should come out clean."},
+  {recipe_id: 2, display_idx: 4, body: "Serve in slices, toasted with honey butter or salted and honeyed brown butter."},
+  {recipe_id: 3, display_idx: 0, body: "Preheat oven to 350 degrees F (175 degrees C). Grease a 9x13 inch glass baking dish."},
+  {recipe_id: 3, display_idx: 1, body: "Bring a large pot of lightly salted water to a boil. Add pasta and cook for 8 to 10 minutes or until al dente; drain and stir in 6 tablespoons sliced butter."},
+  {recipe_id: 3, display_idx: 2, body: "In a medium bowl beat egg yolks with sugar and cream cheese; stir into noodles and add sour cream, cottage cheese and salt. Beat egg whites until stiff and fold into mixture. Transfer mixture to prepared dish."},
+  {recipe_id: 3, display_idx: 3, body: "n a small bowl combine melted butter, 1/4 cup sugar, and graham cracker crumbs. Sprinkle over noodle mixture."},
+  {recipe_id: 3, display_idx: 4, body: "Bake in preheated oven for 1 hour. Can be served hot or cold, preferably in small squares."}
+])
+User.create!([
+  {username: "samuel", password_digest: "$2a$10$c/./tXGozw8vlUEx.6IB0.fcBopIke/ozhAtoxdOxNhhBEQBKAj82", session_token: "w6dAk7cBtNFlvKSvoHuVng"},
+  {username: "hannah", password_digest: "$2a$10$lwT4HtIVABrxePh7edYlQucjInKlWBiPYHu/J.1G/KZBrD/ZVnO6y", session_token: "CSHd6SccaSvQiJpfH4dsXQ"}
+])

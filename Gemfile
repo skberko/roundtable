@@ -6,6 +6,7 @@ gem 'bootstrap-sass'
 gem 'annotate'
 gem 'rails_12factor'
 gem 'figaro'
+gem 'seed_dump'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

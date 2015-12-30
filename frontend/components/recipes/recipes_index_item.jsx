@@ -22,8 +22,10 @@ var History = require('react-router').History;
 
       return(
           <li style={backgroundImage} className="recipe-index-item" onClick={this.showDetail}>
-            <p>{this.props.recipe.title}</p>
-            <p>by: {this.props.recipe.author_name}</p>
+            <div className="recipe-index-item-label-text">
+              <p>{this.props.recipe.title}</p>
+              <p>by: {this.props.recipe.author_name}</p>
+            </div>
           </li>
       );
     }

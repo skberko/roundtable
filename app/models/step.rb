@@ -3,5 +3,5 @@ class Step < ActiveRecord::Base
 
   belongs_to :recipe, inverse_of: :steps
 
-  has_many :annotations
+  has_many :annotations, dependent: :destroy
 end

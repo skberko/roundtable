@@ -7,7 +7,6 @@ var SignOut = React.createClass({
   mixins: [ReactRouter.History],
 
   signOut: function(){
-    debugger;
     ApiUtil.destroySession(CURRENT_USER_ID);
   },
 
@@ -27,6 +26,7 @@ var NavBar = React.createClass({
 
 
   render: function () {
+
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
@@ -36,7 +36,6 @@ var NavBar = React.createClass({
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
             <SignOut/>
           </div>
         </div>
