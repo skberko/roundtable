@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+
   def new
   end
 
@@ -20,6 +21,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to new_session_url
+    render :new
   end
 end

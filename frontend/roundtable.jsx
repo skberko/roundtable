@@ -10,10 +10,18 @@ var RecipesIndex = require('./components/recipes/recipes_index.jsx');
 var RecipeForm = require('./components/recipes/recipe_form.jsx');
 var RecipeDetail = require('./components/recipes/recipe_detail.jsx');
 var StepDetail = require('./components/steps/step_detail.jsx');
+var NavBar = require('./components/navbar/navbar.jsx');
+
 
 var App = React.createClass({
   render: function () {
-    return <div>{this.props.children}</div>;
+    // navbar here
+    return (
+      <div>
+        <NavBar/>
+        <div>{this.props.children}</div>
+      </div>
+    );
   }
 });
 

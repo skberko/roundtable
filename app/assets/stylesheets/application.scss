@@ -59,6 +59,26 @@
   margin: 2%;
 }
 
+// Recipe index:
+
+.recipe-index {
+  overflow: auto;
+  margin: 3% 0% 10% 0%;
+  text-align: center;
+}
+
+.recipe-index-item {
+  position: relative;
+  margin: 15px 20px;
+  border: 2px solid black;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  padding: 5px 0px;
+  border-radius: 3px 10px;
+  overflow: hidden;
+}
+
 // Recipe detail:
 
 .recipe-detail-container {
@@ -81,7 +101,7 @@
 }
 
 .recipe-image {
-  
+
 }
 
 .recipe-ingredients-label {
@@ -113,6 +133,7 @@
 .step-detail-box {
   color: black;
   font-size: 100%;
+  float: top;
   position: relative;
   left: 110%;
   // top: 40%;

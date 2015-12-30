@@ -71,11 +71,20 @@ var ApiUtil = {
         alert("Your annotation can't be blank!");
       }
     });
+  },
+
+  destroySession: function () {
+    $.ajax({
+      url: "/session",
+      type: "DELETE",
+      success: function () {
+        window.location = "/session/new";
+      }
+    });
   }
 
 };
 
 // require in window to test ajax requests:
 window.ApiUtil = ApiUtil;
-
 module.exports = ApiUtil;

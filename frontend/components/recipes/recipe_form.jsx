@@ -31,7 +31,7 @@ var RecipeForm = React.createClass({
 
   uploadImage: function (e) {
     e.preventDefault();
-    cloudinary.openUploadWidget({cloud_name: "", upload_preset: ""}, function(error, results){
+    cloudinary.openUploadWidget({cloud_name: "dz5btfj9w", upload_preset: "d7fxl3so"}, function(error, results){
       if(!error){
         // this.props.postImage(results[0]);
         this.setState({ image_url: results[0].public_id });

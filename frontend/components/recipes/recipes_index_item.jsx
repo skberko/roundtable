@@ -9,10 +9,21 @@ var History = require('react-router').History;
     },
 
     render: function () {
+      if (this.props.recipe.image_url === '') {
+        var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + "no-image_fjw1vh";
+      } else {
+        photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + this.props.recipe.image_url;
+      }
+      // debugger
+
+      var backgroundImage = {
+        backgroundImage: "url(" + photoUrl + ")"
+      };
+
       return(
-          <li onClick={this.showDetail}>
-            <p>Dish: {this.props.recipe.title}</p>
-            <p>Author: {this.props.recipe.author_name}</p>
+          <li style={backgroundImage} className="recipe-index-item" onClick={this.showDetail}>
+            <p>{this.props.recipe.title}</p>
+            <p>by: {this.props.recipe.author_name}</p>
           </li>
       );
     }
