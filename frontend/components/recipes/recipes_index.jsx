@@ -25,20 +25,27 @@ var RecipesIndex = React.createClass({
 
   render: function () {
     var backgroundImage = {
-      backgroundImage: "url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_750,h_489/cutting_board_bg_nc56nq.jpg)"
+      backgroundImage: "url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg)"
     };
 
     return(
       <div className="test">
 
-        <div style={backgroundImage} className="welcome-message-container">
-          <div className="welcome-text">
-            Welcome to RoundTable!
-            <ul>
-              <li>Expand your culinary horizons - Share and discover new dishes</li>
-              <li>No more kitchen confusion -  Annotations guide you you understand recipes step by step</li>
-            </ul>
+        <div className="hero">
+          <div className="pithy-welcome-text">
+            Your kitchen, demystified
           </div>
+          <div className="roundtable-welcome-text">
+            RoundTable lets you...
+          </div>
+          <ul className="welcome-list">
+            <li className="welcome-list-item">Explore new recipes</li>
+            <li className="welcome-list-item">Share your favorites</li>
+            <li className="welcome-list-item">Read annotated tips on recipes from other contributers</li>
+            <li className="welcome-list-item">Share your own tips on how to make recipes even better</li>
+          </ul>
+
+
         </div>
 
         <div className="recipe-index-items-container">

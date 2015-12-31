@@ -75,23 +75,107 @@
 
 .welcome-message-container {
   margin: 5% 0% 0% 0%;
-  height: 489px;
-  width: 750px;
-  border-radius: 3px 10px;
+  // width: 100vw;
+  height: 50vh;
+  // width: 750px;
+  // width: 100%;
   display: inline-block;
   border: 1px solid white;
-  box-shadow: 1px 1px 1px #888888;
+  background-size: contain;
+  // background-repeat: no-repeat;
+  background: url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg) no-repeat center center;
   // text-align: left;
 }
 
-.welcome-text {
+.roundtable-welcome-text {
+  text-align: left;
+  padding: 5% 0% 0% 15%;
+  font-size: 24px;
+  color: white;
+}
+
+.pithy-welcome-text {
   text-align: left;
   padding: 5% 0% 0% 5%;
-  font-size: 150%;
+  font-size: 54px;
   color: white;
-  width: 60%;
-  text-shadow: -1px 0 #888888, 0 1px #888888, 1px 0 #888888, 0 -1px #888888;
+  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
 }
+
+.roundtable-welcome-text {
+  text-align: left;
+  padding: 5% 0% 0% 10%;
+  font-size: 32px;
+  color: white;
+  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+}
+
+.welcome-list {
+  list-style: none;
+  position: relative;
+  left: 5%;
+  text-align: left;
+  font-size: 24px;
+  color: white;
+  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+}
+
+.welcome-list-item {
+  margin: 2.5% 0% 0% 2.5%;
+}
+
+.hero {
+  background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg") no-repeat center center;
+  background-size: cover;
+  height: 95vh;
+  overflow: hidden;
+ }
+  // .hero:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  //   opacity: .8; }
+  // .hero .intro {
+  //   padding: 3rem;
+  //   position: relative;
+  //   top: 50%;
+  //   transform: translateY(-50%); }
+  // .hero h1 {
+  //   color: #fff;
+  //   font-size: 1.5rem;
+  //   line-height: 1.5em;
+  //   letter-spacing: -0.025em;
+  //   font-weight: 300;
+  //   text-align: center; }
+  // .hero p {
+  //   color: #fff;
+  //   line-height: 1.75em;
+  //   font-weight: 200;
+  //   text-align: center;
+  //   margin-bottom: 2rem; }
+  // .hero .tech-img {
+  //   background: url("http://static.pexels.com/wp-content/uploads/2015/02/apple-hand-iphone-6-4322-525x350.jpg") no-repeat center center;
+  //   background-size: cover;
+  //   height: 9rem;
+  //   width: 9rem;
+  //   border-radius: 50%;
+  //   display: block;
+  //   margin: 0 auto; }
+  // @media only screen and (min-width: 40.063em) {
+  //   .hero .tech-img {
+  //     height: 18rem;
+  //     width: 18rem; }
+  //   .hero h1 {
+  //     padding-top: 4.5rem;
+  //     text-align: right;
+  //     font-size: 2.5rem; }
+  //   .hero p {
+  //     text-align: right; } }
+
 
 .recipe-index-items-container {
   overflow: auto;
@@ -103,9 +187,6 @@
   padding: 0%;
 }
 
-.add-recipe-link-text {
-  font-size: 125%;
-}
 
 .recipe-index-item {
   position: relative;
@@ -117,7 +198,7 @@
   width: 200px;
   border: 1px solid white;
   padding: 5px 0px;
-  border-radius: 3px 10px;
+  // border-radius: 3px 10px;
   overflow: hidden;
 }
 
@@ -131,20 +212,22 @@
   width: 200px;
   border: 1px solid black;
   padding: 5px 0px;
-  border-radius: 3px 10px;
+  // border-radius: 3px 10px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .recipe-index-item-label-text {
-  border: 2px solid black;
-  border-radius: 5px;
+  border: 1px solid black;
+  // border-radius: 2px 5px;
   padding: 0px 10px;
+  margin: 3px;
   display: inline-block;
-  vertical-align: bottom;
-  // position: relative;
-  // top: 5%;
-  background-color: white;
+  background-color: #e5f2ff;
+}
+
+.add-recipe-link-text {
+  font-size: 125%;
 }
 
 // Recipe detail:
