@@ -47,8 +47,8 @@ var RecipesIndex = React.createClass({
           <ul className="welcome-list">
             <li className="welcome-list-item">Explore new recipes</li>
             <li className="welcome-list-item">Share your favorites</li>
-            <li className="welcome-list-item">Read annotated tips on recipes from other contributers</li>
-            <li className="welcome-list-item">Share your own tips on how to make recipes even better</li>
+            <li className="welcome-list-item">Read annotated tips on recipes from other cooks</li>
+            <li className="welcome-list-item">Share tips on how to make recipes even better</li>
           </ul>
 
           <a onClick={this.scrollToRecipes}>

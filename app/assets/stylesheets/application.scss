@@ -236,6 +236,7 @@
 
 .recipe-detail-container {
   width: 95%;
+  margin-top: 50px;
   margin-right: 2.5%;
   margin-left: 2.5%;
   float: left;
@@ -244,17 +245,25 @@
 }
 
 .recipe-title {
-  font-size: 150%;
-  margin: 0% 0% 1% 0%
+  font-size: 250%;
+  margin: 0% 0% 0% 0%;
+  text-align: center;
 }
 
 .recipe-author-info {
   font-size: 100%;
-  margin: 0% 0% 8% 0%
+  margin: 0% 0% 3% 0%;
+  text-align: center;
 }
 
 .recipe-image {
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  height: 35vh;
+  border: 3px solid white;
+  border-radius: 2px;
 }
 
 .recipe-ingredients-label {
@@ -295,6 +304,10 @@
   border: 1px solid black;
   overflow: scroll;
   height: 300px;
+}
+
+.hidden {
+  display: none;
 }
 
 // recipe form

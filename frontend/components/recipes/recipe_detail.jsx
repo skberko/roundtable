@@ -54,19 +54,25 @@ var RecipeDetail = React.createClass({
   render: function () {
     if (this.state.recipe === undefined) { return <div></div>; }
 
-    var imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_150/" + this.state.recipe.image_url;
+    var imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_350/"
+      + this.state.recipe.image_url;
 
     return(
       <div className="recipe-detail-container">
 
         <div className="recipe-title">{this.state.recipe.title}</div>
-        <div className="recipe-author-info">Submitted by: {this.state.recipe.author_name}</div>
 
-        <img className="" src={imageUrl}></img>
+        <div className="recipe-author-info">
+          Submitted by: {this.state.recipe.author_name}
+        </div>
+
+        <img className="recipe-image" src={imageUrl}></img>
 
 
         <div className="recipe-ingredients-label">Ingredients:</div>
-        <article className="recipe-ingredients">{this.state.recipe.ingredients}</article>
+        <article className="recipe-ingredients">
+          {this.state.recipe.ingredients}
+        </article>
 
         <div className="recipe-steps-box">
           <div>Steps:</div>
