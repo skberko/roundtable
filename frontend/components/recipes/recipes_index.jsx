@@ -23,10 +23,16 @@ var RecipesIndex = React.createClass({
     this.recipeListener.remove();
   },
 
+  scrollToRecipes: function () {
+    var actualRecipeViewPlace = document.getElementById('inivisble-anchor');
+    actualRecipeViewPlace.scrollIntoView();
+  },
+
   render: function () {
     var backgroundImage = {
       backgroundImage: "url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg)"
     };
+
 
     return(
       <div className="test">
@@ -45,11 +51,16 @@ var RecipesIndex = React.createClass({
             <li className="welcome-list-item">Share your own tips on how to make recipes even better</li>
           </ul>
 
-
+          <a onClick={this.scrollToRecipes}>
+            Click here to go to recipes
+          </a>
+          <br/>
+          <Link to="recipes/new">Add a New Recipe</Link>
         </div>
 
+        <div id="inivisble-anchor"></div>
+
         <div className="recipe-index-items-container">
-          <p>Recipes:</p>
           <ul className="recipe-index-items-list">{this.state.recipes.map(function (recipe) {
             return(<RecipesIndexItem key={recipe.id} recipe={recipe}/>);
           })}</ul>

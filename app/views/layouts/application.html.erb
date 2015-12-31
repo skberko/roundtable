@@ -14,15 +14,6 @@
 </head>
 <body class="static-background">
 
-<!-- below will become obsolete after navbar implementation: -->
-<!-- <% if signed_in? %>
-  <%= current_user.username %>
-  <%= button_to "Sign Out", session_url, :method => :delete %>
-<% else %>
-  <%= link_to "Sign In", new_session_url %>
-  <%= link_to "Sign Up", new_user_url %>
-<% end %> -->
-
   <% if current_user %>
     <script>
       window.CURRENT_USER_ID = <%= current_user.id %>

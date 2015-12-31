@@ -72,7 +72,7 @@ var RecipeForm = React.createClass({
 
     return(
       <div>
-        <form className="new-recipe" onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="recipe_title">Dish (required):</label>
             <input

@@ -99,25 +99,26 @@
   padding: 5% 0% 0% 5%;
   font-size: 54px;
   color: white;
-  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .roundtable-welcome-text {
   text-align: left;
-  padding: 5% 0% 0% 10%;
+  padding: 5% 0% 0% 5%;
+  left: 0%;
   font-size: 32px;
   color: white;
-  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .welcome-list {
   list-style: none;
   position: relative;
-  left: 5%;
+  left: 0%;
   text-align: left;
   font-size: 24px;
   color: white;
-  text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .welcome-list-item {
@@ -127,8 +128,9 @@
 .hero {
   background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg") no-repeat center center;
   background-size: cover;
-  height: 95vh;
+  height: 91vh;
   overflow: hidden;
+  margin-top: 3%;
  }
   // .hero:before {
   //   content: '';
@@ -293,4 +295,11 @@
   border: 1px solid black;
   overflow: scroll;
   height: 300px;
+}
+
+// recipe form
+.recipe-form {
+  text-align: center;
+  position: relative;
+  top: 50px;
 }
