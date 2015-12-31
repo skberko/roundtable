@@ -4,7 +4,6 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
-    # sets author_id to current user's id in the create recipe form
     @recipe[:author_id] = current_user.id
 
     if @recipe.save

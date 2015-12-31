@@ -24,14 +24,34 @@ var RecipesIndex = React.createClass({
   },
 
   render: function () {
+    var backgroundImage = {
+      backgroundImage: "url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_750,h_489/cutting_board_bg_nc56nq.jpg)"
+    };
+
     return(
-      <div className="recipe-index">
-        <p>Recipes:</p>
-        <ul>{this.state.recipes.map(function (recipe) {
-          return(<RecipesIndexItem key={recipe.id} recipe={recipe}/>);
-        })}</ul>
-        <br/>
-        <Link to="recipes/new">Add New Recipe</Link>
+      <div className="test">
+
+        <div style={backgroundImage} className="welcome-message-container">
+          <div className="welcome-text">
+            Welcome to RoundTable!
+            <ul>
+              <li>Expand your culinary horizons - Share and discover new dishes</li>
+              <li>No more kitchen confusion -  Annotations guide you you understand recipes step by step</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="recipe-index-items-container">
+          <p>Recipes:</p>
+          <ul className="recipe-index-items-list">{this.state.recipes.map(function (recipe) {
+            return(<RecipesIndexItem key={recipe.id} recipe={recipe}/>);
+          })}</ul>
+          <br/>
+          <div className="add-recipe-link-text">
+            <Link to="recipes/new">Add New Recipe</Link>
+          </div>
+        </div>
+
       </div>
     );
   }

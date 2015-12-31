@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.sticky-navbar {
+  position: fixed;
+}
+
 .static-background {
   background-color: #e5f2ff;
 };
@@ -65,16 +69,49 @@
 
 // Recipe index and recipe index items:
 
-.recipe-index {
+.test {
+  text-align: center;
+}
+
+.welcome-message-container {
+  margin: 5% 0% 0% 0%;
+  height: 489px;
+  width: 750px;
+  border-radius: 3px 10px;
+  display: inline-block;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px #888888;
+  // text-align: left;
+}
+
+.welcome-text {
+  text-align: left;
+  padding: 5% 0% 0% 5%;
+  font-size: 150%;
+  color: white;
+  width: 60%;
+  text-shadow: -1px 0 #888888, 0 1px #888888, 1px 0 #888888, 0 -1px #888888;
+}
+
+.recipe-index-items-container {
   overflow: auto;
   margin: 3% 0% 10% 0%;
   text-align: center;
 }
 
+.recipe-index-items-list {
+  padding: 0%;
+}
+
+.add-recipe-link-text {
+  font-size: 125%;
+}
+
 .recipe-index-item {
   position: relative;
   margin: 15px 20px;
-  border: 2px solid black;
+  border: 1px solid white;
+  box-shadow: 1px 1px 1px #888888;
   display: inline-block;
   height: 200px;
   width: 200px;
