@@ -40,12 +40,6 @@ var RecipeDetail = React.createClass({
     // ApiUtil.fetchAllAnnotations(newProps.params.recipeId);
   },
 
-  goToStepDetailPage: function (stepId) {
-    // console.log("stepId is: " + stepId);
-    var url = '/recipes/' + this.props.params.recipeId + '/steps/' + stepId;
-    this.props.history.pushState(null, url);
-  },
-
   _onChange: function () {
     this.setState({recipe: this.getStateFromStore()});
   },
@@ -76,12 +70,10 @@ var RecipeDetail = React.createClass({
 
         <div className="recipe-steps-box">
           <div>Steps:</div>
-          <ol>
             {this.state.recipe.steps.map(function (step) {
               // passes in body as a prop to the StepDetail:
-              return(<li  key={step.id} onClick={this.goToStepDetailPage.bind(null, step.id)}>{step.body}</li>);
+              return(<StepDetail key= {step.id} recipeId={this.state.recipe.id} stepId={step.id} stepBody={step.body} stepDisplayIndex={step.display_idx} />);
             }.bind(this))}
-          </ol>
           <br></br>
 
           {this.props.children}

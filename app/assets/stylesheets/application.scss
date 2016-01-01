@@ -292,18 +292,14 @@
 }
 
 // step detail (i.e. list of annotations)
-.step-detail-box {
+.step-annotations-box {
+  position: absolute;
   color: black;
   font-size: 100%;
-  float: top;
-  position: relative;
-  left: 110%;
-  // top: 40%;
-  bottom: 20%;
-  width: 77.5%;
   border: 1px solid black;
-  overflow: scroll;
-  height: 300px;
+  max-width: 40vw;
+  // overflow: scroll;
+  // height: 400px;
 }
 
 .hidden {
