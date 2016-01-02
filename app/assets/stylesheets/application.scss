@@ -132,51 +132,21 @@
   overflow: hidden;
   margin-top: 3%;
  }
-  // .hero:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
-  //   opacity: .8; }
-  // .hero .intro {
-  //   padding: 3rem;
-  //   position: relative;
-  //   top: 50%;
-  //   transform: translateY(-50%); }
-  // .hero h1 {
-  //   color: #fff;
-  //   font-size: 1.5rem;
-  //   line-height: 1.5em;
-  //   letter-spacing: -0.025em;
-  //   font-weight: 300;
-  //   text-align: center; }
-  // .hero p {
-  //   color: #fff;
-  //   line-height: 1.75em;
-  //   font-weight: 200;
-  //   text-align: center;
-  //   margin-bottom: 2rem; }
-  // .hero .tech-img {
-  //   background: url("http://static.pexels.com/wp-content/uploads/2015/02/apple-hand-iphone-6-4322-525x350.jpg") no-repeat center center;
-  //   background-size: cover;
-  //   height: 9rem;
-  //   width: 9rem;
-  //   border-radius: 50%;
-  //   display: block;
-  //   margin: 0 auto; }
-  // @media only screen and (min-width: 40.063em) {
-  //   .hero .tech-img {
-  //     height: 18rem;
-  //     width: 18rem; }
-  //   .hero h1 {
-  //     padding-top: 4.5rem;
-  //     text-align: right;
-  //     font-size: 2.5rem; }
-  //   .hero p {
-  //     text-align: right; } }
+
+ .hero-links {
+   position: relative;
+   top: 5%;
+ }
+
+.white-link {
+  font-size: 110%;
+  color: white;
+  cursor: pointer;
+}
+
+.white-link:hover {
+  color: white;
+}
 
 
 .recipe-index-items-container {
@@ -239,9 +209,11 @@
   margin-top: 50px;
   margin-right: 2.5%;
   margin-left: 2.5%;
+  margin-bottom: 2.5%;
   float: left;
   padding: 3%;
   border: 1px solid black;
+  border-radius: 3px;
 }
 
 .recipe-title {
@@ -277,7 +249,8 @@
 }
 
 .recipe-steps-box {
-  border: 1px solid black;
+  // border: 1px solid black;
+  // border-radius: 3px;
   width: 50%;
   margin: 0% 0% 5% 0%;
 }
@@ -286,9 +259,18 @@
   white-space: pre-wrap;
 }
 
+.recipe-step {
+}
+
+.recipe-step:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .recipe-index-link {
   border: 0px solid black;
   margin: 0% 0% 0% 0%;
+  text-align: center;
 }
 
 // step detail (i.e. list of annotations)
@@ -298,6 +280,8 @@
   font-size: 100%;
   border: 1px solid black;
   max-width: 40vw;
+  padding: 1%;
+  border-radius: 3px;
   // overflow: scroll;
   // height: 400px;
 }
@@ -312,3 +296,9 @@
   position: relative;
   top: 50px;
 }
+
+// annotation form
+  .annotation-form-text {
+    width: 100;
+    height: 50;
+  }

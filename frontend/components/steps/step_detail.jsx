@@ -23,7 +23,7 @@ var StepDetail = React.createClass({
     var stepDisplayIndex = this.props.stepDisplayIndex;
 
     return(
-      <p  key={stepId} onClick={this.goToStepAnnotations.bind(null, stepId)}>
+      <p  className={"recipe-step"} key={stepId} onClick={this.goToStepAnnotations.bind(null, stepId)}>
         {parseInt(stepDisplayIndex) + 1}. {stepBody}
       </p>
     );

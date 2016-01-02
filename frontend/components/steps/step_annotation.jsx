@@ -49,7 +49,7 @@ var StepAnnotation = React.createClass({
       return (
         <div style={{top: top, left: left}}
           className="step-annotations-box"
-          onClick={this.history.goBack}>
+          onBlur={this.history.goBack}>
           <div>No annotations yet!</div>
           <AnnotationForm stepId={this.state.step.id} recipeId={this.props.params.recipeId}/>
         </div>
@@ -60,7 +60,7 @@ var StepAnnotation = React.createClass({
       <div
         style={{top: top, left: left}}
         className="step-annotations-box"
-        onClick={this.history.goBack}>
+        onBlur={this.history.goBack}>
         <p>Annotations:</p>
         <ul>{step.annotations.map(function (annotation) {
           return(

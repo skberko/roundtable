@@ -51,11 +51,13 @@ var RecipesIndex = React.createClass({
             <li className="welcome-list-item">Share tips on how to make recipes even better</li>
           </ul>
 
-          <a onClick={this.scrollToRecipes}>
-            Click here to go to recipes
-          </a>
-          <br/>
-          <Link to="recipes/new">Add a New Recipe</Link>
+          <div className="hero-links">
+            <a className="white-link" onClick={this.scrollToRecipes}>
+              All recipes
+            </a>
+            <br/>
+            <Link className="white-link" to="recipes/new">Add a new recipe</Link>
+          </div>
         </div>
 
         <div id="inivisble-anchor"></div>

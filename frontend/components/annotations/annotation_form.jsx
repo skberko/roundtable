@@ -38,8 +38,8 @@ var AnnotationForm = React.createClass({
 
           <div>
             <label htmlFor="annotation_body">Whatcha got to say?</label>
-            <input
-              type="text"
+            <textarea
+              className="annotation-form-text"
               id="annotation_body"
               valueLink={this.linkState("body")}/>
           </div>
