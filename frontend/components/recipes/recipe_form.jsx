@@ -17,6 +17,10 @@ var RecipeForm = React.createClass({
     };
   },
 
+  componentDidMount: function () {
+    window.scrollTo(0, 0);
+  },
+
   handleTypeChange: function(i, stepBody) {
     this.state.steps[i].body = stepBody;
     this.state.steps[i].display_idx = i;
