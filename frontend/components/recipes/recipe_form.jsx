@@ -133,7 +133,7 @@ var RecipeForm = React.createClass({
           <div>
             Optional:
             <br/>
-            <button onClick={this.uploadImage}>Add a photo!</button>
+            <button onClick={this.uploadImage}>Select a photo</button>
           </div>
           <img className={photoClass} src = {photoUrl}></img>
 

@@ -22,6 +22,7 @@ var RecipeDetail = React.createClass({
   componentDidMount: function () {
     // need to fetch recipe; and set listener on store for when recipe
     // actually arrives
+    window.scrollTo(0, 0);
     ApiUtil.fetchRecipe(this.props.params.recipeId);
     // ApiUtil.fetchAllAnnotations(this.props.params.recipeId);
     this.recipeListener = RecipeStore.addListener(this._onChange);
