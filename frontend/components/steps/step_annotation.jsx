@@ -7,7 +7,7 @@ var History = require('react-router').History;
 
 
 var StepAnnotation = React.createClass({
-  mixins: [History],
+  mixins: [History, require('react-onclickoutside')],
 
   getInitialState: function(){
     return { step: null };
@@ -35,6 +35,10 @@ var StepAnnotation = React.createClass({
     this.setState({step: StepStore.find(newStepId)});
   },
 
+  handleClickOutside: function(evt) {
+    this.history.goBack();
+  },
+
   render: function () {
     // var step = this.getStepFromStore() || this.state.step;
     var step = this.state.step;
@@ -47,9 +51,7 @@ var StepAnnotation = React.createClass({
     if (step === null) { return <div></div>; }
     if (step.annotations.length === 0) {
       return (
-        <div style={{top: top, left: left}}
-          className="step-annotations-box"
-          onBlur={this.history.goBack}>
+        <div style={{top: top, left: left}} className="step-annotations-box">
           <div>No annotations yet!</div>
           <AnnotationForm stepId={this.state.step.id} recipeId={this.props.params.recipeId}/>
         </div>
@@ -58,9 +60,7 @@ var StepAnnotation = React.createClass({
 
     return(
       <div
-        style={{top: top, left: left}}
-        className="step-annotations-box"
-        onBlur={this.history.goBack}>
+        style={{top: top, left: left}} className="step-annotations-box">
         <p>Annotations:</p>
         <ul>{step.annotations.map(function (annotation) {
           return(

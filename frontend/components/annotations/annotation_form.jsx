@@ -37,7 +37,8 @@ var AnnotationForm = React.createClass({
         <form className="new-annotation"onSubmit={this.handleSubmit}>
 
           <div>
-            <label htmlFor="annotation_body">Whatcha got to say?</label>
+            <label htmlFor="annotation_body">What do you want to add?</label>
+            <br></br>
             <textarea
               className="annotation-form-text"
               id="annotation_body"

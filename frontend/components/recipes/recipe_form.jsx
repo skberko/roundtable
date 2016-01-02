@@ -71,11 +71,15 @@ var RecipeForm = React.createClass({
     }
 
     return(
-      <div>
+      <div className="recipe-form-container">
+        <h2>Add a New Dish</h2>
+
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="recipe_title">Dish (required):</label>
-            <input
+            <label htmlFor="recipe_title">Name (required):</label>
+            <br/>
+            <textarea
+              className="title-textarea"
               type="text"
               id="recipe_title"
               valueLink={this.linkState("title")}/>
@@ -83,7 +87,9 @@ var RecipeForm = React.createClass({
 
           <div>
             <label htmlFor="recipe_description">Description (required):</label>
+            <br/>
             <textarea
+              className="description-textarea"
               type="text"
               id="recipe_description"
               valueLink={this.linkState("description")}
@@ -92,7 +98,9 @@ var RecipeForm = React.createClass({
 
           <div>
             <label htmlFor="recipe_ingredients">Ingredients (required):</label>
+            <br/>
             <textarea
+              className="ingredients-textarea"
               type="text"
               id="recipe_ingredients"
               valueLink={this.linkState("ingredients")}
@@ -101,7 +109,7 @@ var RecipeForm = React.createClass({
 
           <div>
             <label htmlFor="recipe_steps">Steps (required):</label>
-
+            <br/>
             {this.state.steps.map(function (step, i) {
               var stepLink = {
                 value: this.state.steps[i].body,
@@ -110,22 +118,28 @@ var RecipeForm = React.createClass({
 
               return(<textarea
                 key={i}
+                className="step-textarea"
                 type="text"
                 id="recipe_steps"
                 valueLink={stepLink}
               />);
             }.bind(this))}
-            <button onClick={this.handleNewStep}>Add New Step</button>
+            <br/>
+            <button onClick={this.handleNewStep}>Add another step</button>
+            <br/>
+            <br/>
           </div>
 
           <div>
-            <button onClick={this.uploadImage}>Upload new image!</button>
+            Optional:
+            <br/>
+            <button onClick={this.uploadImage}>Add a photo!</button>
           </div>
           <img className={photoClass} src = {photoUrl}></img>
 
 
-
-          <input type="submit" value="Add Recipe!"></input>
+          <br/><br/>
+          <input type="submit" value="Submit Recipe!"></input>
           <br/>
         </form>
         <br></br>
