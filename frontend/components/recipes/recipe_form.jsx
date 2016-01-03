@@ -129,21 +129,21 @@ var RecipeForm = React.createClass({
               />);
             }.bind(this))}
             <br/>
-            <button onClick={this.handleNewStep}>Add another step</button>
+            <button className="universal-button" onClick={this.handleNewStep}>Add another step</button>
             <br/>
             <br/>
           </div>
 
           <div>
-            Optional:
+            <label>Optional:</label>
             <br/>
-            <button onClick={this.uploadImage}>Select a photo</button>
+            <button className="universal-button" onClick={this.uploadImage}>Select a photo</button>
           </div>
           <img className={photoClass} src = {photoUrl}></img>
 
 
           <br/><br/>
-          <input type="submit" value="Submit Recipe!"></input>
+          <input className="universal-button" type="submit" value="Submit Recipe!"></input>
           <br/>
         </form>
         <br></br>
