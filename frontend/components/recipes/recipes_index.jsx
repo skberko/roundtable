@@ -57,6 +57,7 @@ var RecipesIndex = React.createClass({
             </a>
             <br/>
             <Link className="white-link" to="recipes/new">Add a new recipe</Link>
+            <div className="white-arrow">▼</div>
           </div>
         </div>
 

@@ -24,7 +24,7 @@ var History = require('react-router').History;
 
     render: function () {
       if (this.props.recipe.image_url === '') {
-        var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + "no-image_fjw1vh";
+        var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + "fork_and_knife_dstz1d";
       } else {
         photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_200/" + this.props.recipe.image_url;
       }

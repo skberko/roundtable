@@ -33,7 +33,7 @@ var NavBar = React.createClass({
             <a className="navbar-brand" href="#">RoundTable</a>
           </div>
 
-          
+
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <SignOut/>

@@ -49,8 +49,13 @@ var RecipeDetail = React.createClass({
   render: function () {
     if (this.state.recipe === undefined) { return <div></div>; }
 
-    var imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_350/"
+    if (!(this.state.recipe.image_url)) {
+      var imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_350/"
+        + "fork_and_knife_dstz1d";
+    } else {
+      imageUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_350/"
       + this.state.recipe.image_url;
+    }
 
     return(
       <div className="recipe-detail-container">
