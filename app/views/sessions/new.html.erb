@@ -26,9 +26,22 @@
       <input type="submit" value="Sign In" class="universal-button">
       <br/>
       <br/>
-      <a href="/users/new" class="universal-button">Sign Up!</a>
+      <a href="/users/new" class="universal-button">Sign Up</a>
+
 
     </form>
+
+    </br>
+
+    <form action="<%= session_url %>" method="post">
+      <%= auth_token_input %>
+
+      <input type="hidden" name="user[username]" value="guest">
+      <input type="hidden" name="user[password]" value="guestguest">
+      <button class="universal-button" type="submit">Demo User</button>
+    </form>
+
   </div>
+
 
 </div>
