@@ -45,7 +45,7 @@ var AnnotationForm = React.createClass({
               valueLink={this.linkState("body")}/>
           </div>
 
-          <input type="submit" value="Add Annotation!"></input>
+          <input className="universal-button" type="submit" value="Add Annotation!"></input>
         </form>
       </div>
     );

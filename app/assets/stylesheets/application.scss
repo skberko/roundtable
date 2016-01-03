@@ -93,9 +93,21 @@
   margin-top: 43px;
   left: 30px;
   text-align: left;
-  color: white;
+  // color: white;
   border-radius: 6px;
   // text: black;
+}
+
+.input-area-white-text {
+  color: white;
+}
+
+.input-area-button-link {
+}
+
+.input-area-button-link:hover {
+  text-decoration: none;
+  color: white;
 }
 
 .roundtable-title {
