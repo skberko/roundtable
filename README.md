@@ -7,7 +7,7 @@ RoundTable allows users to:
 - [x] Create an account
 - [x] Log in/log out
 - [x] Upload recipes
-- [x] View and idnex of all recipes
+- [x] View an index of all recipes
 - [x] View individual recipes
 - [x] Upload an unlimited number of nested steps per recipe
 - [x] Upload photos associated with recipes
