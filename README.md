@@ -1,6 +1,6 @@
 # RoundTable
 
-[Heroku link][roundtable-app.herokuapp.com/] **NB:** This should be a link to your production site
+[roundtable-app.herokuapp.com/][heroku] **NB:** This should be a link to your production site
 
 [heroku]: RoundTable
 
