@@ -105,7 +105,7 @@ var NavBar = React.createClass({
         url = "/recipes/" + (parseInt(recipeId) + 1);
         return (
           <div>
-            <div key={idx}>
+            <div className="search-result-item" key={idx}>
               <Link to={url} key={idx}>{userResults[parseInt(recipeId)]}</Link>
             </div>
           </div>);

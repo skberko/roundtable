@@ -428,7 +428,7 @@
 	// width: 812px;
   text-color: black;
 	position: fixed;
-  top: 54px;
+  top: 52px;
 	left: 128px;
 	padding-left: 2%;
   padding-right: 2%;
@@ -436,6 +436,13 @@
   border-radius: 3px;
   max-height: 50vh;
   overflow: scroll;
+  width: 30vw;
+  border: 1px solid black;
+}
+
+.search-result-item {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .search-parameter {
