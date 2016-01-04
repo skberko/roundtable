@@ -1,6 +1,6 @@
 # RoundTable
 
-[RoundTable][https://roundtable-app.herokuapp.com/]
+[RoundTable](https://roundtable-app.herokuapp.com/)
 
 [https://roundtable-app.herokuapp.com/]: RoundTable
 
