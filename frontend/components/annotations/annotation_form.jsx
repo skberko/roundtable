@@ -15,7 +15,6 @@ var AnnotationForm = React.createClass({
     return this.blankAttrs;
   },
 
-// need to modify where this info comes from; testing on pizza step 1 for now:
   handleSubmit: function (e) {
 
     e.preventDefault();

@@ -67,12 +67,6 @@
 
 // session and user create
 
-// 1.5313935
-
-.sticky-navbar {
-  position: fixed;
-}
-
 .auth-container {
   position: absolute;
   top:0;
@@ -235,6 +229,7 @@
   height: 200px;
   width: 200px;
   border: 1px solid white;
+  border-radius: 3px;
   padding: 5px 0px;
   // border-radius: 3px 10px;
   overflow: hidden;
@@ -260,7 +255,8 @@
   padding: 0px 10px;
   margin: 3px;
   display: inline-block;
-  background-color: #e5f2ff;
+  border-radius: 3px;
+  background-color: #F8F8F8;
 }
 
 .add-recipe-link-text {
@@ -399,13 +395,19 @@
   .annotation-form-text {
     width: 100%;
     height: 10vw;
+    border-radius: 3px;
     resize: none;
   }
 
 // search
 .search-bar {
   position: relative;
-  // margin: 100px 75px;
+  left: auto;
+  right: auto;
+  width: 30vw;
+  border: 1px solid black;
+  margin-top: 4px;
+  border-radius: 3px;
 }
 
 .search-bar input {
@@ -421,15 +423,21 @@
 }
 
 .search-listsearch-listreveal {
-	// background: whitesmoke;
+	background: #F8F8F8;
 	// border-bottom: 3px solid black;
 	// width: 812px;
   text-color: black;
 	position: fixed;
-	left: 27%;
-	padding-left: 2%
+  top: 54px;
+	left: 128px;
+	padding-left: 2%;
+  padding-right: 2%;
+  background-color: solid white;
+  border-radius: 3px;
+  max-height: 50vh;
+  overflow: scroll;
 }
 
 .search-parameter {
-	padding-left: 11%
+	padding-left: 2%
 }

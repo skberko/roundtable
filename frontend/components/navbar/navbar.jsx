@@ -108,7 +108,6 @@ var NavBar = React.createClass({
             <div key={idx}>
               <Link to={url} key={idx}>{userResults[parseInt(recipeId)]}</Link>
             </div>
-            <br></br>
           </div>);
       });
     }
@@ -116,31 +115,38 @@ var NavBar = React.createClass({
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid">
+
           <div className="navbar-header">
             <a className="navbar-brand" href="#">RoundTable</a>
           </div>
-
-          <div className="search-bar">
-             <form onSubmit={this.handleSubmit}>
-               <div className="search-parameter">
-                 <input
-                   type="text"
-                   placeholder="Search recipes..."
-                   valueLink={this.linkState('searchInput')} />
+          <form className='navbar-form navbar-left collapse navbar-collapse' role='search'>
+            <div className="search-bar">
+               <div onSubmit={this.handleSubmit}>
+                 <div className="search-parameter">
+                   <input
+                     type="text"
+                     placeholder="Search recipes..."
+                     valueLink={this.linkState('searchInput')} />
+                 </div>
                </div>
-             </form>
 
-             <div onClick={this.clearSearch} className={"search-list" + searchList}>
-               {searchResults}
-             </div>
+               <div onClick={this.clearSearchInput} className={"search-list" + searchList}>
+                 {searchResults}
+               </div>
 
-           </div>
-
-
+            </div>
+          </form>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <SignOut/>
           </div>
+
+
+
+
+
+
+
         </div>
       </nav>
     );
