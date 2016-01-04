@@ -39,7 +39,7 @@ var RecipesIndex = React.createClass({
 
         <div className="hero">
           <div className="pithy-welcome-text">
-            Your kitchen, demystified
+            Your kitchen, annotated
           </div>
           <div className="roundtable-welcome-text">
             RoundTable lets you...
