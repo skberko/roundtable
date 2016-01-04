@@ -1,8 +1,8 @@
 # RoundTable
 
-[RoundTable][https://roundtable-app.herokuapp.com/] **NB:** This should be a link to your production site
+[RoundTable][https://roundtable-app.herokuapp.com/]
 
-[heroku]: RoundTable
+[https://roundtable-app.herokuapp.com/]: RoundTable
 
 ## Minimum Viable Product
 
