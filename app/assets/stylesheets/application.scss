@@ -17,9 +17,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.static-background {
+body {
+  font-family: 'Merriweather', serif;
   background-color: #e5f2ff;
-};
+}
+
+
 
 .universal-button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
