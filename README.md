@@ -1,8 +1,18 @@
 # RoundTable
 
-[RoundTable](https://roundtable-app.herokuapp.com/)
+[RoundTable](https://roundtable-app.herokuapp.com/) is a cooking-focused web application built on Ruby on Rails and React.js. Inspired by Genius, it allows aspiring chefs to share and annotate recipes step by step, thereby mitigating much of the confusion that comes with trying a new recipe.
 
-[https://roundtable-app.herokuapp.com/]: RoundTable
+RoundTable allows users to:
+
+- [x] Create an account
+- [x] Log in/log out
+- [x] Upload recipes
+- [x] View and idnex of all recipes
+- [x] View individual recipes
+- [x] Upload an unlimited number of nested steps per recipe
+- [x] Upload photos associated with recipes
+- [x] Annotate any step of any recipe
+- [x] Search for recipes, accounting for user errors like spelling
 
 ## Minimum Viable Product
 
