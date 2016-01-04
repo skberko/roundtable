@@ -1,7 +1,6 @@
 # RoundTable
 
 [RoundTable][https://roundtable-app.herokuapp.com/]
-<a href="www.google.com">hello</a>
 
 [https://roundtable-app.herokuapp.com/]: RoundTable
 
