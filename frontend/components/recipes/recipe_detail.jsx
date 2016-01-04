@@ -14,7 +14,8 @@ var RecipeDetail = React.createClass({
   },
 
   getInitialState: function () {
-    return {recipe: this.getStateFromStore(),
+    return {
+      recipe: this.getStateFromStore(),
       annotations: []
     };
   },
@@ -68,14 +69,18 @@ var RecipeDetail = React.createClass({
 
         <img className="recipe-image" src={imageUrl}></img>
 
+        <div className="recipe-detail-label">About</div>
+        <article className="recipe-ingredients-description">
+          {this.state.recipe.description}
+        </article>
 
-        <div className="recipe-ingredients-label">Ingredients:</div>
-        <article className="recipe-ingredients">
+        <div className="recipe-detail-label">Ingredients</div>
+        <article className="recipe-ingredients-description">
           {this.state.recipe.ingredients}
         </article>
 
         <div className="recipe-steps-box">
-          <div>Steps:</div>
+          <div className="recipe-detail-label">Steps:</div>
             {this.state.recipe.steps.map(function (step) {
               // passes in body as a prop to the StepDetail:
               return(<StepDetail key= {step.id} recipeId={this.state.recipe.id} stepId={step.id} stepBody={step.body} stepDisplayIndex={step.display_idx} />);

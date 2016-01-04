@@ -304,12 +304,14 @@ body {
   border-radius: 2px;
 }
 
-.recipe-ingredients-label {
+.recipe-detail-label {
   font-size: 120%;
+  margin-bottom: 6px;
 }
 
-.recipe-ingredients {
+.recipe-ingredients-description {
   white-space: pre-wrap;
+  width: 50%;
   font-size: 100%;
   margin: 1% 0% 1% 1%;
 }

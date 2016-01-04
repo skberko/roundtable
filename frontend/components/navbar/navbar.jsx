@@ -84,7 +84,6 @@ var NavBar = React.createClass({
       fuse.search(this.state.searchInput).forEach(function (result) {
         fuseSearchResults[result] = fuse.list[result];
       });
-      console.log(fuseSearchResults);
 
       return fuseSearchResults;
     } else {
