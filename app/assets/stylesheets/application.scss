@@ -154,18 +154,18 @@ body {
 .pithy-welcome-text {
   text-align: left;
   padding: 5% 0% 0% 5%;
-  font-size: 54px;
+  font-size: 48px;
   color: white;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .roundtable-welcome-text {
   text-align: left;
   padding: 5% 0% 0% 5%;
   left: 0%;
-  font-size: 32px;
+  font-size: 28px;
   color: white;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .welcome-list {
@@ -173,13 +173,14 @@ body {
   position: relative;
   left: 0%;
   text-align: left;
-  font-size: 24px;
+  font-size: 22px;
   color: white;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .welcome-list-item {
   margin: 2.5% 0% 0% 2.5%;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .hero {
@@ -192,7 +193,9 @@ body {
 
  .hero-links {
    position: relative;
+   font-size: 14px;
    top: 5%;
+   text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
  }
 
 .white-link {
@@ -344,6 +347,7 @@ body {
   border: 1px solid black;
   width: 40vw;
   padding: 1%;
+  margin-bottom: 10%;
   border-radius: 3px;
   background-color: white;
   // overflow: scroll;
@@ -431,7 +435,7 @@ body {
   text-color: black;
 	position: fixed;
   top: 52px;
-	left: 128px;
+	left: 137px;
 	padding-left: 2%;
   padding-right: 2%;
   background-color: solid white;
