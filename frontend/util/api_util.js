@@ -85,6 +85,4 @@ var ApiUtil = {
 
 };
 
-// require in window to test ajax requests:
-window.ApiUtil = ApiUtil;
 module.exports = ApiUtil;

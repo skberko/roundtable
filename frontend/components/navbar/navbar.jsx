@@ -1,7 +1,14 @@
+var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
-var React = require('react');
+var Link = ReactRouter.Link;
 var ApiUtil = require('../../util/api_util');
+var RecipeStore = require('../../stores/recipe_store.js');
+var RecipeActions = require('../../actions/recipe_actions.js');
+var LinkedStateMixin = require('react-addons-linked-state-mixin');
+
+
+var Fuse = require('fuse.js');
 
 var SignOut = React.createClass({
   mixins: [ReactRouter.History],
@@ -9,8 +16,6 @@ var SignOut = React.createClass({
   signOut: function(){
     ApiUtil.destroySession(CURRENT_USER_ID);
   },
-
-
 
   render: function() {
     return(
@@ -24,14 +29,112 @@ var SignOut = React.createClass({
 
 
 var NavBar = React.createClass({
+  mixins: [LinkedStateMixin],
+
+  getInitialState: function () {
+    return {
+      recipes: RecipeStore.all(),
+      searchInput: ""
+    };
+  },
+
+  _onChange: function () {
+    this.setState({
+      recipes: RecipeStore.all()
+    });
+  },
+
+  clearSearchInput: function () {
+    this.setState({
+      searchInput: ""
+    });
+  },
+
+  componentDidMount: function () {
+    this.searchListener = RecipeStore.addListener(this._onChange);
+    ApiUtil.fetchAllRecipes();
+  },
+
+  componentWillUnmount: function () {
+    this.searchListener.remove();
+  },
+
+  search: function () {
+    var recipes = this.state.recipes;
+    var recipeTitles = [];
+
+    if (recipes.length > 0) {
+      recipes.map(function (recipe) {
+        recipeTitles.push(recipe.title);
+      });
+    }
+
+    var fuseOptions = {
+      caseSensitive: false,
+      includeScore: false,
+      shouldSort: true,
+      threshold: 0.5,
+      keys: ['title']
+    };
+
+    var fuse = new Fuse(recipeTitles, fuseOptions);
+
+    if (fuse.search(this.state.searchInput).length > 0) {
+      var fuseSearchResults = {};
+      fuse.search(this.state.searchInput).forEach(function (result) {
+        fuseSearchResults[result] = fuse.list[result];
+      });
+      console.log(fuseSearchResults);
+
+      return fuseSearchResults;
+    } else {
+      return false;
+    }
+
+  },
 
   render: function () {
+    var searchResults = <div></div>;
+    var searchList = "search-list";
+    var url;
+
+    if (this.search()) {
+      searchList += "reveal";
+      var userResults = this.search();
+      searchResults = Object.keys(userResults).map(function (recipeId, idx) {
+        url = "/recipes/" + (parseInt(recipeId) + 1);
+        return (
+          <div>
+            <div key={idx}>
+              <Link to={url} key={idx}>{userResults[parseInt(recipeId)]}</Link>
+            </div>
+            <br></br>
+          </div>);
+      });
+    }
+
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
             <a className="navbar-brand" href="#">RoundTable</a>
           </div>
+
+          <div className="search-bar">
+             <form onSubmit={this.handleSubmit}>
+               <div className="search-parameter">
+                 <input
+                   type="text"
+                   placeholder="Search recipes..."
+                   valueLink={this.linkState('searchInput')} />
+               </div>
+             </form>
+
+             <div onClick={this.clearSearch} className={"search-list" + searchList}>
+               {searchResults}
+             </div>
+
+           </div>
 
 
 

@@ -401,3 +401,35 @@
     height: 10vw;
     resize: none;
   }
+
+// search
+.search-bar {
+  position: relative;
+  // margin: 100px 75px;
+}
+
+.search-bar input {
+  // font-weight: 500;
+  // font-size: 32px;
+  // width: 100%;
+  // height: 75px;
+  margin-left: 10px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: black;
+}
+
+.search-listsearch-listreveal {
+	// background: whitesmoke;
+	// border-bottom: 3px solid black;
+	// width: 812px;
+  text-color: black;
+	position: fixed;
+	left: 27%;
+	padding-left: 2%
+}
+
+.search-parameter {
+	padding-left: 11%
+}
