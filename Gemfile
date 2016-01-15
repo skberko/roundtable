@@ -7,6 +7,7 @@ gem 'annotate'
 gem 'rails_12factor'
 gem 'figaro'
 gem 'seed_dump'
+gem 'newrelic_rpm'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
