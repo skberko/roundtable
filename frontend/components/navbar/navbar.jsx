@@ -29,7 +29,7 @@ var SignOut = React.createClass({
 
 
 var NavBar = React.createClass({
-  mixins: [LinkedStateMixin],
+  mixins: [LinkedStateMixin, require('react-onclickoutside')],
 
   getInitialState: function () {
     return {
@@ -45,6 +45,12 @@ var NavBar = React.createClass({
   },
 
   clearSearchInput: function () {
+    this.setState({
+      searchInput: ""
+    });
+  },
+
+  handleClickOutside: function(evt) {
     this.setState({
       searchInput: ""
     });

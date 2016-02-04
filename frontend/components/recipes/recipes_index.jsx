@@ -29,11 +29,6 @@ var RecipesIndex = React.createClass({
   },
 
   render: function () {
-    var backgroundImage = {
-      backgroundImage: "url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg)"
-    };
-
-
     return(
       <div className="test">
 
