@@ -33,18 +33,20 @@ var RecipesIndex = React.createClass({
       <div className="test">
 
         <div className="hero">
-          <div className="pithy-welcome-text">
-            Your kitchen, annotated
+          <div className="hero-transparent-text-div">
+            <div className="pithy-welcome-text">
+              Your kitchen, annotated
+            </div>
+            <div className="roundtable-welcome-text">
+              RoundTable lets you...
+            </div>
+            <ul className="welcome-list">
+              <li className="welcome-list-item">Explore new recipes</li>
+              <li className="welcome-list-item">Share your favorites</li>
+              <li className="welcome-list-item">Read annotated tips on recipes from other cooks</li>
+              <li className="welcome-list-item">Share tips on how to make recipes even better</li>
+            </ul>
           </div>
-          <div className="roundtable-welcome-text">
-            RoundTable lets you...
-          </div>
-          <ul className="welcome-list">
-            <li className="welcome-list-item">Explore new recipes</li>
-            <li className="welcome-list-item">Share your favorites</li>
-            <li className="welcome-list-item">Read annotated tips on recipes from other cooks</li>
-            <li className="welcome-list-item">Share tips on how to make recipes even better</li>
-          </ul>
 
           <div className="hero-links">
             <a className="white-link" onClick={this.scrollToRecipes}>
@@ -52,7 +54,6 @@ var RecipesIndex = React.createClass({
             </a>
             <br/>
             <Link className="white-link" to="recipes/new">Add a new recipe</Link>
-            <div className="white-arrow">▼</div>
           </div>
         </div>
 

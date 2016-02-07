@@ -17,49 +17,55 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
 body {
   font-family: 'Merriweather', serif;
-  background-color: #e5f2ff;
+  background-color: #FAE3B1;
+  color: #53301F;
+}
+
+a {
+  color: #635732;
+}
+
+a:hover {
+
+}
+
+.navbar-background-color {
+  background-color: #A64E31;
+}
+
+.navbar-default .navbar-brand {
+    color: #FAE3B1;
 }
 
 .universal-button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;
-	box-shadow:inset 0px 1px 0px 0px #54a3f7;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));
-	background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-	background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-	background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-	background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);
-	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);
-	background-color:#007dc1;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #124d77;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	padding-top: 6px;
-  padding-bottom: 6px;
-  width: 140px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #154682;
-  text-align: center;
+  background: #98a64b;
+  background-image: -webkit-linear-gradient(top, #98a64b, #7A8443);
+  background-image: -moz-linear-gradient(top, #98a64b, #7A8443);
+  background-image: -ms-linear-gradient(top, #98a64b, #7A8443);
+  background-image: -o-linear-gradient(top, #98a64b, #7A8443);
+  background-image: linear-gradient(to bottom, #98a64b, #7A8443);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
   font-family: 'Merriweather', serif;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 8px 20px 8px 20px;
+  text-decoration: none;
 }
+
 .universal-button:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));
-	background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-	background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-	background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-	background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);
-	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);
-	background-color:#0061a7;
+  background: #8a9644;
+  background-image: -webkit-linear-gradient(top, #8a9644, #687039);
+  background-image: -moz-linear-gradient(top, #8a9644, #687039);
+  background-image: -ms-linear-gradient(top, #8a9644, #687039);
+  background-image: -o-linear-gradient(top, #8a9644, #687039);
+  background-image: linear-gradient(to bottom, #8a9644, #687039);
+  text-decoration: none;
 }
 .universal-button:active {
 	position:relative;
@@ -116,7 +122,7 @@ body {
 
 // Recipe form
 .form-no-image {
-  border: 1px solid black;
+  border: 1px solid #53301F;
   margin: 2%;
 }
 
@@ -142,6 +148,7 @@ body {
   // background-repeat: no-repeat;
   background: url(http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746/kitchen_panorama_xo60sb.jpg) no-repeat center center;
   // text-align: left;
+  color: #FAE3B1;
 }
 
 .roundtable-welcome-text {
@@ -149,46 +156,55 @@ body {
   padding: 5% 0% 0% 15%;
   font-size: 24px;
   color: white;
+  // color: #FAE3B1;
 }
 
 .pithy-welcome-text {
   text-align: left;
-  padding: 5% 0% 0% 5%;
+  padding: 2.5% 0% 0% 0%;
   font-size: 48px;
-  color: white;
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  color: #FAE3B1;
+  text-align: center;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .roundtable-welcome-text {
   text-align: left;
-  padding: 5% 0% 0% 5%;
+  padding: 5% 0% 0% 0%;
   left: 0%;
   font-size: 28px;
-  color: white;
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  text-align: center;
+  color: #FAE3B1;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .welcome-list {
   list-style: none;
   position: relative;
   left: 0%;
-  text-align: left;
+  text-align: center;
   font-size: 22px;
-  color: white;
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  // color: white;
+  color: #FAE3B1;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .welcome-list-item {
   margin: 2.5% 0% 0% 2.5%;
-  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
 }
 
 .hero {
-  background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2000,h_746//kitchen_panorama_opac90_ylzszc.png") no-repeat center center;
+  background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2089,h_797/spices_spoons_bg_ct08qp.jpg") no-repeat center center;
   background-size: cover;
   height: 91vh;
   overflow: hidden;
   margin-top: 3%;
+ }
+
+ .hero-transparent-text-div {
+   background: rgba(0, 0, 0, 0.5);
+   padding-bottom: 10px;
  }
 
  .hero-links {
@@ -202,11 +218,6 @@ body {
   font-size: 110%;
   color: white;
   cursor: pointer;
-}
-
-.white-arrow {
-  color: white;
-  font-size: 130%;
 }
 
 .white-link:hover {
@@ -248,14 +259,14 @@ body {
   display: inline-block;
   height: 200px;
   width: 200px;
-  border: 1px solid black;
+  border: 1px #53301F;
   padding: 5px 0px;
   overflow: hidden;
   cursor: pointer;
 }
 
 .recipe-index-item-label-text {
-  border: 1px solid black;
+  border: 1px #53301F;
   // border-radius: 2px 5px;
   padding: 0px 10px;
   margin: 3px;
@@ -336,7 +347,7 @@ body {
 }
 
 .recipe-index-link {
-  border: 0px solid black;
+  border: 0px #53301F;
   margin: 0% 0% 0% 0%;
   text-align: left;
 }
@@ -344,9 +355,8 @@ body {
 // step detail (i.e. list of annotations)
 .step-annotations-box {
   position: absolute;
-  color: black;
   font-size: 100%;
-  border: 1px solid black;
+  border: 1px solid #53301F;
   width: 40vw;
   padding: 1%;
   margin-bottom: 10%;
@@ -413,9 +423,10 @@ body {
   left: auto;
   right: auto;
   width: 30vw;
-  border: 1px solid black;
-  margin-top: 4px;
+  border: 1px solid #53301F;
+  margin-top: 5px;
   border-radius: 3px;
+  background-color: #F8F8F8;
 }
 
 .search-bar input {
@@ -427,14 +438,14 @@ body {
   border: 0;
   outline: 0;
   background: transparent;
-  color: black;
+  color: #53301F;
 }
 
 .search-listsearch-listreveal {
 	background: #F8F8F8;
 	// border-bottom: 3px solid black;
 	// width: 812px;
-  text-color: black;
+  text-color: #53301F;
 	position: fixed;
   top: 52px;
 	left: 137px;
@@ -445,7 +456,7 @@ body {
   max-height: 50vh;
   overflow: scroll;
   width: 30vw;
-  border: 1px solid black;
+  border: 1px solid #53301F;
 }
 
 .search-result-item {
@@ -454,5 +465,6 @@ body {
 }
 
 .search-parameter {
-	padding-left: 2%
+	padding-left: 2%;
+  color: #7C7357;
 }
