@@ -42,6 +42,7 @@ var StepAnnotation = React.createClass({
   render: function () {
     var step = this.state.step;
     var leftOffset = parseInt(this.props.location.query.width);
+    var top = parseInt(this.props.location.query.top)
     var left = parseInt(this.props.location.query.left) + leftOffset + 50;
 
     if (step === null) { return <div></div>; }

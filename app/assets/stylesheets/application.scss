@@ -242,6 +242,7 @@ a:hover {
   width: 250px;
   padding: 0px 0px;
   overflow: hidden;
+  border-radius: 3px;
 }
 
 .recipe-index-item-hover {
@@ -254,6 +255,8 @@ a:hover {
   overflow: hidden;
   cursor: pointer;
   opacity: 0.8;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
 }
 
 .recipe-index-item-title-label {
@@ -359,6 +362,7 @@ a:hover {
   font-size: 100%;
   border: 1px solid #53301F;
   width: 40vw;
+  // top: 917px;
   padding: 1%;
   margin-bottom: 10%;
   border-radius: 3px;
