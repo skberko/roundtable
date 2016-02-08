@@ -122,7 +122,7 @@ var NavBar = React.createClass({
         <div className="container-fluid">
 
           <div className="navbar-header">
-            <a className="navbar-brand navbar-brand-color" href="#">RoundTable</a>
+            <a className="navbar-brand navbar-brand-color navbar-brand-custom-color" href="#">RoundTable</a>
           </div>
           <form className='navbar-form navbar-left collapse navbar-collapse' role='search'>
             <div className="search-bar">
