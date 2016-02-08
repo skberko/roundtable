@@ -33,8 +33,6 @@ var ApiUtil = {
       },
       error: function (message) {
         alert("All required fields must be complete!");
-        // console.log(message);
-        // err && err();
       }
     });
   },

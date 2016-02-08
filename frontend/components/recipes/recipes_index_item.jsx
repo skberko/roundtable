@@ -28,7 +28,6 @@ var History = require('react-router').History;
       } else {
         photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_250/" + this.props.recipe.image_url;
       }
-      // debugger
 
       var backgroundImage = {
         backgroundImage: "url(" + photoUrl + ")"

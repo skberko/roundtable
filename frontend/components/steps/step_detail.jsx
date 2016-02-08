@@ -8,7 +8,6 @@ var StepDetail = React.createClass({
   mixins: [History],
 
   goToStepAnnotations: function (stepId) {
-    // console.log("stepId is: " + stepId);
     var stepTop = $(ReactDOM.findDOMNode(this)).offset().top;
     var stepLeft = $(ReactDOM.findDOMNode(this)).offset().left;
     var stepWidth = $(ReactDOM.findDOMNode(this)).width();
