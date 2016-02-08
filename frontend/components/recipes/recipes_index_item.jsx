@@ -24,9 +24,9 @@ var History = require('react-router').History;
 
     render: function () {
       if (this.props.recipe.image_url === '') {
-        var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_200,h_200/" + "fork_and_knife_dstz1d";
+        var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_250,h_250/" + "fork_and_knife_dstz1d";
       } else {
-        photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_200/" + this.props.recipe.image_url;
+        photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_250/" + this.props.recipe.image_url;
       }
       // debugger
 
@@ -46,9 +46,11 @@ var History = require('react-router').History;
             onMouseEnter={this.hoverOn}
             onMouseLeave={this.hoverOff}
             onClick={this.showDetail}>
-            <div className="recipe-index-item-label-text">
-              <p>{this.props.recipe.title}</p>
-              <p>by: {this.props.recipe.author_name}</p>
+            <div className="recipe-index-item-title-label">
+              {this.props.recipe.title}
+            </div>
+            <div className="recipe-index-item-author-label">
+              by: {this.props.recipe.author_name}
             </div>
           </li>
       );
@@ -56,3 +58,8 @@ var History = require('react-router').History;
   });
 
 module.exports = RecipesIndexItem;
+
+// <div className="recipe-index-item-label-text">
+//   <p>{this.props.recipe.title}</p>
+//   <p>by: {this.props.recipe.author_name}</p>
+// </div>

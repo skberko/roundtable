@@ -228,41 +228,59 @@ a:hover {
 
 .recipe-index-item {
   position: relative;
-  margin: 15px 20px;
+  margin: 10px 10px;
   border: 1px solid white;
   box-shadow: 1px 1px 1px #888888;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border: 1px solid white;
   border-radius: 3px;
-  padding: 5px 0px;
-  // border-radius: 3px 10px;
+  padding: 0px 0px;
   overflow: hidden;
 }
 
 .recipe-index-item-hover {
   position: relative;
-  margin: 15px 20px;
+  margin: 10px 10px;
   border: 1px solid white;
   box-shadow: 8px 8px 8px #888888;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   border: 1px #53301F;
-  padding: 5px 0px;
+  padding: 0px 0px;
   overflow: hidden;
   cursor: pointer;
 }
 
-.recipe-index-item-label-text {
-  border: 1px #53301F;
-  // border-radius: 2px 5px;
-  padding: 0px 10px;
-  margin: 3px;
-  display: inline-block;
-  border-radius: 3px;
-  background-color: #F8F8F8;
+// .recipe-index-item-label-text {
+//   border: 1px #53301F;
+//   padding: 0px 10px;
+//   margin: 3px;
+//   display: inline-block;
+//   border-radius: 3px;
+//   background-color: #F8F8F8;
+// }
+
+.recipe-index-item-title-label {
+  width: 100%;
+  color: #FAE3B1;
+  background-color: #53301F;
+  font-size: 15px;
+  // margin-left: 5px;
+  // margin-right: 5px;
+}
+
+.recipe-index-item-author-label {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  font-size: 13px;
+  // margin-left: 5px;
+  // margin-right: 5px;
+  color: #FAE3B1;
+  background-color: #53301F;
 }
 
 .add-recipe-link-text {
