@@ -151,73 +151,63 @@ a:hover {
   color: #FAE3B1;
 }
 
-.roundtable-welcome-text {
-  text-align: left;
-  padding: 5% 0% 0% 15%;
-  font-size: 24px;
-  color: white;
-  // color: #FAE3B1;
-}
-
 .pithy-welcome-text {
-  text-align: left;
+  text-align: center;
   padding: 2.5% 0% 0% 0%;
   font-size: 48px;
   color: #FAE3B1;
-  text-align: center;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
-}
-
-.roundtable-welcome-text {
-  text-align: left;
-  padding: 5% 0% 0% 0%;
-  left: 0%;
-  font-size: 28px;
-  text-align: center;
-  color: #FAE3B1;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  margin-bottom: 8%;
 }
 
 .welcome-list {
   list-style: none;
   position: relative;
-  left: 0%;
   text-align: center;
+  padding: 0px;
   font-size: 22px;
-  // color: white;
   color: #FAE3B1;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  margin-bottom: 10%;
 }
 
 .welcome-list-item {
-  margin: 2.5% 0% 0% 2.5%;
-  // text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  margin: 2.5% 0% 2.5% 0%;
+  padding: 0%;
 }
 
 .hero {
   background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2089,h_797/spices_spoons_bg_ct08qp.jpg") no-repeat center center;
   background-size: cover;
-  height: 91vh;
+  height: 91.5vh;
+  min-height: 550px;
   overflow: hidden;
   margin-top: 3%;
  }
 
  .hero-transparent-text-div {
+   display: inline-block;
+   width: 70vw;
+   border-radius: 5px;
    background: rgba(0, 0, 0, 0.5);
-   padding-bottom: 10px;
+   min-height: 339px;
+   min-width: 680px;
+   padding-bottom: 2vh;
+   padding-top: 2vh;
+   margin-top: 10vh;
+   margin-bottom: 10vh;
  }
 
  .hero-links {
    position: relative;
    font-size: 14px;
    top: 5%;
-   text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+   color: #FAE3B1;
  }
 
 .white-link {
   font-size: 110%;
   color: white;
   cursor: pointer;
+  color: #FAE3B1;
 }
 
 .white-link:hover {

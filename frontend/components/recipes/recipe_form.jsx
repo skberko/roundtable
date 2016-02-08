@@ -76,7 +76,7 @@ var RecipeForm = React.createClass({
 
     return(
       <div className="recipe-form-container">
-        <h2>Add a New Dish</h2>
+        <h2>Add a New Recipe</h2>
 
         <form onSubmit={this.handleSubmit}>
           <div>
@@ -154,10 +154,3 @@ var RecipeForm = React.createClass({
 });
 
 module.exports = RecipeForm;
-
-// <label htmlFor="recipe_image_url">Photo URL:</label>
-// <input
-//   type="text"
-//   id="recipe_image_url"
-//   valueLink={this.linkState("image_url")}
-// />
