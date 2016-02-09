@@ -79,7 +79,7 @@ var RecipeForm = React.createClass({
         <h2>Add a New Recipe</h2>
 
         <form onSubmit={this.handleSubmit}>
-          <div>
+          <div className="form-div">
             <label htmlFor="recipe_title">Name (required):</label>
             <br/>
             <textarea
@@ -89,7 +89,7 @@ var RecipeForm = React.createClass({
               valueLink={this.linkState("title")}/>
           </div>
 
-          <div>
+          <div className="form-div">
             <label htmlFor="recipe_description">Description (required):</label>
             <br/>
             <textarea
@@ -100,7 +100,7 @@ var RecipeForm = React.createClass({
             />
           </div>
 
-          <div>
+          <div className="form-div">
             <label htmlFor="recipe_ingredients">Ingredients (required):</label>
             <br/>
             <textarea
@@ -111,8 +111,8 @@ var RecipeForm = React.createClass({
             />
           </div>
 
-          <div>
-            <label htmlFor="recipe_steps">Steps (required):</label>
+          <div className="form-div">
+            <label htmlFor="recipe_steps">Steps (at least one required):</label>
             <br/>
             {this.state.steps.map(function (step, i) {
               var stepLink = {
@@ -134,13 +134,12 @@ var RecipeForm = React.createClass({
                 </div>
             );
             }.bind(this))}
-            <br/>
-            <button className="universal-button" onClick={this.handleNewStep}>Add another step</button>
+            <button className="universal-button new-step-button" onClick={this.handleNewStep}>Add another step</button>
             <br/>
             <br/>
           </div>
 
-          <div>
+          <div className="form-div">
             <label>Optional:</label>
             <br/>
             <button className="universal-button" onClick={this.uploadImage}>Select a photo</button>
