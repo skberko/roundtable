@@ -109,11 +109,10 @@ var NavBar = React.createClass({
       searchResults = Object.keys(userResults).map(function (recipeId, idx) {
         url = "/recipes/" + (parseInt(recipeId) + 1);
         return (
-          <div>
             <div className="search-result-item" key={idx}>
               <Link to={url} key={idx}>{userResults[parseInt(recipeId)]}</Link>
             </div>
-          </div>);
+          );
       });
     }
 
