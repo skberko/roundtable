@@ -244,6 +244,8 @@ a:hover {
   padding: 0px 0px;
   overflow: hidden;
   border-radius: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .recipe-index-item-hover {
@@ -257,7 +259,9 @@ a:hover {
   cursor: pointer;
   opacity: 0.8;
   border-radius: 3px;
-  transition: all 0.2s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.4s ease-in-out;
 }
 
 .recipe-index-item-title-label {

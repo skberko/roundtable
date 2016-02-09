@@ -25,18 +25,20 @@ var History = require('react-router').History;
     render: function () {
       if (this.props.recipe.image_url === '') {
         var photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_250,h_250/" + "fork_and_knife_dstz1d";
+        var photoUrlZoom = "http://res.cloudinary.com/dz5btfj9w/image/upload/w_300,h_300/" + "fork_and_knife_dstz1d";
       } else {
         photoUrl = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_250/" + this.props.recipe.image_url;
+        photoUrlZoom = "http://res.cloudinary.com/dz5btfj9w/image/upload/h_300/" + this.props.recipe.image_url;
       }
 
-      var backgroundImage = {
-        backgroundImage: "url(" + photoUrl + ")"
-      };
+      var backgroundImage = {backgroundImage: "url(" + photoUrl + ")"};
 
       if (this.state.hover === false) {
           var recipeIndexItemClass = "recipe-index-item";
+          var backgroundImage = {backgroundImage: "url(" + photoUrl + ")"};
       } else {
         recipeIndexItemClass = "recipe-index-item-hover";
+        backgroundImage = {backgroundImage: "url(" + photoUrlZoom + ")"};
       }
 
       return(
