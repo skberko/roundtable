@@ -37,6 +37,10 @@ a:hover {
   background-color: #A64E31;
 }
 
+#no-border-navbar {
+  border-bottom: 0px;
+}
+
 .navbar-default .navbar-brand {
     color: #FAE3B1;
 }
@@ -185,11 +189,11 @@ a:hover {
 .hero {
   background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2089,h_797/spices_spoons_bg_ct08qp.jpg") no-repeat center center;
   background-size: cover;
-  height: 91.5vh;
+  height: calc(100vh - 50px);
   min-height: 550px;
   min-width: 700px;
   overflow: hidden;
-  margin-top: 3%;
+  margin-top: 30px;
  }
 
  .hero-transparent-text-div {

@@ -117,7 +117,7 @@ var NavBar = React.createClass({
     }
 
     return (
-      <nav className="navbar navbar-default navbar-fixed-top navbar-background-color">
+      <nav className="navbar navbar-default navbar-fixed-top navbar-background-color" id="no-border-navbar">
         <div className="container-fluid">
 
           <div className="navbar-header">
