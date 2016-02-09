@@ -120,13 +120,19 @@ var RecipeForm = React.createClass({
                 requestChange: this.handleTypeChange.bind(null, i)
               };
 
-              return(<textarea
-                key={i}
-                className="step-textarea"
-                type="text"
-                id="recipe_steps"
-                valueLink={stepLink}
-              />);
+              return(
+                <div key={i}>
+                  <div className="step-number-label">
+                    Step {i+1}
+                  </div>
+                  <textarea
+                    className="step-textarea"
+                    type="text"
+                    id="recipe_steps"
+                    valueLink={stepLink}
+                  />
+                </div>
+            );
             }.bind(this))}
             <br/>
             <button className="universal-button" onClick={this.handleNewStep}>Add another step</button>

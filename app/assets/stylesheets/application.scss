@@ -387,12 +387,14 @@ a:hover {
   margin-right: 20%;
   margin-bottom: 40px;
   text-align: center;
+  font-size: 16px;
 }
 
 .title-textarea {
   width: 80%;
   resize: none;
   border-radius: 3px;
+  font-size: 14px;
 }
 
 .description-textarea {
@@ -400,6 +402,7 @@ a:hover {
   height: 100px;
   resize: none;
   border-radius: 3px;
+  font-size: 14px;
 }
 
 .ingredients-textarea {
@@ -407,6 +410,11 @@ a:hover {
   height: 250px;
   resize: none;
   border-radius: 3px;
+  font-size: 14px;
+}
+
+.step-number-label {
+  font-size: 12px;
 }
 
 .step-textarea {
@@ -414,6 +422,7 @@ a:hover {
   height: 100px;
   resize: none;
   border-radius: 3px;
+  font-size: 14px;
 }
 
 
