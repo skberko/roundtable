@@ -187,6 +187,7 @@ a:hover {
   background-size: cover;
   height: 91.5vh;
   min-height: 550px;
+  min-width: 700px;
   overflow: hidden;
   margin-top: 3%;
  }
@@ -265,7 +266,7 @@ a:hover {
      -moz-transition: all .2s ease-out;
        -o-transition: all .2s ease-out;
       -ms-transition: all .2s ease-out;
-          // transition: all .2s ease-out;
+        transition: all .2s ease-out;
 }
 
 .recipe-index-item-title-label {
