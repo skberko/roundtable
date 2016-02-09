@@ -264,18 +264,22 @@ a:hover {
   width: 100%;
   color: #FAE3B1;
   background-color: #7A8443;
-  font-size: 15px;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background: rgba(166, 78, 49, 0.9);
 }
 
 .recipe-index-item-author-label {
   width: 100%;
   position: absolute;
   bottom: 0px;
-  font-size: 13px;
+  font-size: 12px;
   text-align: right;
   padding-right: 4.5px;
-  color: #2A1E13;
-  background-color: #7A8443;
+  color: #FAE3B1;
+  background: rgba(42, 30, 19, 0.5);
+  // background-color: #2A1E13;
 }
 
 .add-recipe-link-text {
