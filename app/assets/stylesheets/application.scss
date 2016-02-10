@@ -17,8 +17,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
 body {
   font-family: 'Merriweather', serif;
   background-color: #FAE3B1;
@@ -110,7 +108,10 @@ a:hover {
 .universal-button:active {
   position:relative;
   top:1px;
+  outline: 0;
 }
+
+button:focus { outline:0 !important; }
 
 // session and user create
 
@@ -141,9 +142,6 @@ a:hover {
 
 .input-area-white-text {
   color: white;
-}
-
-.input-area-button-link {
 }
 
 .input-area-button-link:hover {
@@ -358,7 +356,7 @@ a:hover {
   margin-right: auto;
   margin-bottom: 3%;
   height: 35vh;
-  border: 3px solid white;
+  border: 1px solid #B1975D;
   border-radius: 2px;
 }
 
