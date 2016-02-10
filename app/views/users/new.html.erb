@@ -1,31 +1,37 @@
-<div class="auth-container">
+<div class="auth-body">
+  <div class="auth-container">
 
-  <div class="roundtable-title">
-    <h2>Welcome to RoundTable!</h2>
+    <div class="roundtable-title">
+      <h2>Welcome to RoundTable</h2>
+    </div>
+
+    <div class="input-area">
+      <h3 class="input-area-white-text">Sign Up</h3>
+      <form action="<%= users_url %>" method="post">
+        <%= auth_token_input %>
+
+        <div class="form-group">
+          <label for="username" class="input-area-white-text">Username</label>
+          <input id="username" type="text" name="user[username]" value="">
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="input-area-white-text">Password</label>
+          <input id="password" type="password" name="user[password]" value="">
+          </label>
+        </div>
+
+        <input type="submit" value="Sign Up" class="universal-button">
+        <br/>
+        <br/>
+
+      </form>
+    </div>
+
+    <div class="input-area-white-text">
+      Already a member?
+      <a href="/session/new" class="input-area-signup-link">Sign in here!</a>
+    </div>
+
   </div>
-
-  <div class="input-area">
-    <h3 class="input-area-white-text">Register</h3>
-    <form action="<%= users_url %>" method="post">
-      <%= auth_token_input %>
-
-      <div class="form-group">
-        <label for="username" class="input-area-white-text">Username</label>
-        <input id="username" type="text" name="user[username]" value="">
-      </div>
-
-      <div class="form-group">
-        <label for="password" class="input-area-white-text">Password</label>
-        <input id="password" type="password" name="user[password]" value="">
-        </label>
-      </div>
-
-      <input type="submit" value="Register!" class="universal-button">
-      <br/>
-      <br/>
-      <!-- <a href="/users/new" class="universal-button">Sign In!</a> -->
-
-    </form>
-  </div>
-
 </div>

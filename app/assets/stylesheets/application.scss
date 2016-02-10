@@ -115,7 +115,13 @@ button:focus { outline:0 !important; }
 
 // session and user create
 
+.auth-body {
+  background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2089,h_797/spices_spoons_bg_ct08qp.jpg") no-repeat center center;
+  height: 100vh;
+}
+
 .auth-container {
+  text-align: center;
   position: absolute;
   top:0;
   bottom: 0;
@@ -124,17 +130,15 @@ button:focus { outline:0 !important; }
   margin: auto;
   width: 667px;
   height: 436px;
-  background-image: url(http://res.cloudinary.com/dz5btfj9w/image/upload/c_scale,w_667/v1451510411/cutting_board_bg_nc56nq.jpg);
-  text-shadow: 1px 1px black;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
-  // border: 1px solid white;
 }
 
 .input-area {
   position: relative;
   margin-top: 43px;
-  left: 30px;
-  text-align: left;
+  // left: 30px;
+  // text-align: left;
   // color: white;
   border-radius: 6px;
   // text: black;
@@ -144,6 +148,11 @@ button:focus { outline:0 !important; }
   color: white;
 }
 
+.input-area-signup-link {
+  color: white;
+  text-decoration: underline;
+}
+
 .input-area-button-link:hover {
   text-decoration: none;
   color: white;
@@ -151,9 +160,8 @@ button:focus { outline:0 !important; }
 
 .roundtable-title {
   margin-top: 30px;
-  text-align: left;
   position: relative;
-  left: 30px;
+  // left: 30px;
   color: white;
 }
 
