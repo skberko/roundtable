@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-
+  color: inherit;
 }
 
 .navbar-background-color {
@@ -497,7 +497,7 @@ button:focus { outline:0 !important; }
   position: relative;
   left: auto;
   right: auto;
-  width: 30vw;
+  width: 350px;
   border: 1px solid #53301F;
   margin-top: 5px;
   border-radius: 3px;
