@@ -132,6 +132,7 @@ button:focus { outline:0 !important; }
   height: 436px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
+
 }
 
 .input-area {
@@ -222,7 +223,7 @@ button:focus { outline:0 !important; }
 .hero {
   background: url("http://res.cloudinary.com/dz5btfj9w/image/upload/w_2089,h_797/spices_spoons_bg_ct08qp.jpg") no-repeat center center;
   background-size: cover;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 30px);
   min-height: 550px;
   min-width: 700px;
   overflow: hidden;
