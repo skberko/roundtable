@@ -24,7 +24,7 @@ var StepDetail = React.createClass({
 
     if (typeof this.props.stepAnnotations !== 'undefined' && this.props.stepAnnotations.length > 0){
       var stepHighlighting = 'highlighted-step';
-      var annotatedCharacter = '🔎';
+      var annotatedCharacter = '';
     } else {
       stepHighlighting = 'nonhighlighted-step';
       var annotatedCharacter = '✐';
