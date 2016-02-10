@@ -52,6 +52,11 @@ a:hover {
   border-color: #656E38;
 }
 
+#left-nav-button:active {
+  position:relative;
+  top:1px;
+}
+
 #bootstrap-brand-modified {
   color: #FAE3B1;
 }
@@ -77,36 +82,35 @@ a:hover {
 }
 
 .universal-button {
-  background: #98a64b;
-  background-image: -webkit-linear-gradient(top, #98a64b, #7A8443);
-  background-image: -moz-linear-gradient(top, #98a64b, #7A8443);
-  background-image: -ms-linear-gradient(top, #98a64b, #7A8443);
-  background-image: -o-linear-gradient(top, #98a64b, #7A8443);
-  background-image: linear-gradient(to bottom, #98a64b, #7A8443);
-  -webkit-border-radius: 6;
-  -moz-border-radius: 6;
-  border-radius: 6px;
-  font-family: 'Merriweather', serif;
-  color: #ffffff;
-  font-size: 13px;
-  padding: 8px 20px 8px 20px;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #F3EBDC;
+  font-size: 16px;
+  background: #7A8443;
+  padding: 6px 12px 6px 12px;
+  border: solid #7A8443 1px;
   text-decoration: none;
+  font-family: 'Merriweather', serif;
+  font-size: 14px;
 }
 
 .universal-button:hover {
-  background: #8a9644;
-  background-image: -webkit-linear-gradient(top, #8a9644, #687039);
-  background-image: -moz-linear-gradient(top, #8a9644, #687039);
-  background-image: -ms-linear-gradient(top, #8a9644, #687039);
-  background-image: -o-linear-gradient(top, #8a9644, #687039);
-  background-image: linear-gradient(to bottom, #8a9644, #687039);
+  background: #656E38;
   text-decoration: none;
 }
-.universal-button:active {
-	position:relative;
-	top:1px;
-}
 
+.universal-button:active {
+  position:relative;
+  top:1px;
+}
 
 // session and user create
 
