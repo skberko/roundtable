@@ -388,16 +388,17 @@ a:hover {
 }
 
 .highlighted-step{
-  // color: #E8D3A4;
   background-color: rgba(172, 162, 119, 0.5);
 }
 
 .highlighted-step:hover{
-  text-decoration: none!important;
+  text-decoration: none;
+  background-color: rgba(91, 44, 15, 0.2);
 }
 
 .nonhighlighted-step:hover{
-  text-decoration: underline;
+  // text-decoration: underline;
+  background-color: rgba(91, 44, 15, 0.2);
 }
 
 .hidden {

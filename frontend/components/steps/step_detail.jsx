@@ -24,14 +24,16 @@ var StepDetail = React.createClass({
 
     if (typeof this.props.stepAnnotations !== 'undefined' && this.props.stepAnnotations.length > 0){
       var stepHighlighting = 'highlighted-step';
+      var annotatedCharacter = '🔎';
     } else {
       stepHighlighting = 'nonhighlighted-step';
+      var annotatedCharacter = '✐';
     }
 
 
     return(
       <p  className={"recipe-step"} key={stepId} onClick={this.goToStepAnnotations.bind(null, stepId)}>
-        {parseInt(stepDisplayIndex) + 1}. <span className={stepHighlighting}>{stepBody}</span>
+        {parseInt(stepDisplayIndex) + 1}. <span className={stepHighlighting}>{stepBody}</span> {annotatedCharacter}
       </p>
     );
   }
