@@ -48,14 +48,6 @@ var ApiUtil = {
     });
   },
 
-  // fetchStepAnnotations: function (stepId) {
-  //   $.ajax({
-  //     url: "api/steps/" + stepId + "/annotations",
-  //     success: function (annotations) {
-  //       AnnotationActions.receiveStepAnnotations(annotations);
-  //     }
-  //   });
-  // },
 
   createAnnotation: function (annotation, stepId, callback) {
     $.ajax({

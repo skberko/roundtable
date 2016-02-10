@@ -9,7 +9,6 @@ var resetSteps = function (steps) {
   steps.forEach(function (step) {
     _steps[step.id] = step;
   });
-  StepStore.__emitChange();
 };
 
 StepStore.find = function (id) {
@@ -20,8 +19,8 @@ StepStore.__onDispatch = function (payload) {
   switch(payload.actionType) {
     case StepConstants.STEPS_RECEIVED:
       resetSteps(payload.steps);
+      StepStore.__emitChange();
   }
 };
 
-window.StepStore = StepStore;
 module.exports = StepStore;

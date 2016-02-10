@@ -17,13 +17,21 @@ var StepDetail = React.createClass({
   },
 
   render: function () {
+
     var stepId = this.props.stepId;
     var stepBody = this.props.stepBody;
     var stepDisplayIndex = this.props.stepDisplayIndex;
 
+    if (typeof this.props.stepAnnotations !== 'undefined' && this.props.stepAnnotations.length > 0){
+      var stepHighlighting = 'highlighted-step';
+    } else {
+      stepHighlighting = 'nonhighlighted-step';
+    }
+
+
     return(
       <p  className={"recipe-step"} key={stepId} onClick={this.goToStepAnnotations.bind(null, stepId)}>
-        {parseInt(stepDisplayIndex) + 1}. {stepBody}
+        {parseInt(stepDisplayIndex) + 1}. <span className={stepHighlighting}>{stepBody}</span>
       </p>
     );
   }

@@ -83,7 +83,7 @@ var RecipeDetail = React.createClass({
           <div className="recipe-detail-label">Steps:</div>
             {this.state.recipe.steps.map(function (step) {
               // passes in body as a prop to the StepDetail:
-              return(<StepDetail key= {step.id} recipeId={this.state.recipe.id} stepId={step.id} stepBody={step.body} stepDisplayIndex={step.display_idx} />);
+              return(<StepDetail key= {step.id} recipeId={this.state.recipe.id} stepId={step.id} stepBody={step.body} stepDisplayIndex={step.display_idx} stepAnnotations={step.annotations}/>);
             }.bind(this))}
           <br></br>
 

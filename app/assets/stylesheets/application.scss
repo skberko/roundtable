@@ -363,7 +363,7 @@ a:hover {
 
 .recipe-step:hover {
   cursor: pointer;
-  text-decoration: underline;
+  // text-decoration: underline;
 }
 
 .recipe-index-link {
@@ -385,6 +385,19 @@ a:hover {
   background-color: white;
   // overflow: scroll;
   // height: 400px;
+}
+
+.highlighted-step{
+  // color: #E8D3A4;
+  background-color: rgba(172, 162, 119, 0.5);
+}
+
+.highlighted-step:hover{
+  text-decoration: none!important;
+}
+
+.nonhighlighted-step:hover{
+  text-decoration: underline;
 }
 
 .hidden {
