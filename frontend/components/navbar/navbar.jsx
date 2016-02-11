@@ -68,12 +68,19 @@ var NavBar = React.createClass({
   search: function () {
     var recipes = this.state.recipes;
     var recipeTitles = [];
+    // var recipeTitlesIDs = [];
 
     if (recipes.length > 0) {
       recipes.map(function (recipe) {
         recipeTitles.push(recipe.title);
       });
     }
+
+    // if (recipes.length > 0) {
+    //   recipes.map(function (recipe) {
+    //     recipeTitlesIDs.push({title: recipe.title, recipeId: recipe.id});
+    //   });
+    // }
 
     var fuseOptions = {
       caseSensitive: false,
@@ -90,7 +97,7 @@ var NavBar = React.createClass({
       fuse.search(this.state.searchInput).forEach(function (result) {
         fuseSearchResults[result] = fuse.list[result];
       });
-
+      // debugger
       return fuseSearchResults;
     } else {
       return false;
@@ -102,15 +109,26 @@ var NavBar = React.createClass({
     var searchResults = <div></div>;
     var searchList = "search-list";
     var url;
+    var recipeId;
+    var recipes = this.state.recipes;
 
     if (this.search()) {
       searchList += "reveal";
       var userResults = this.search();
-      searchResults = Object.keys(userResults).map(function (recipeId, idx) {
-        url = "/recipes/" + (parseInt(recipeId) + 1);
+      searchResults = Object.keys(userResults).map(function (searchId) {
+        var recipeTitle = userResults[parseInt(searchId)];
+        console.log('hey');
+        recipes.forEach(function(recipe) {
+          if (recipeTitle === recipe.title) {
+            recipeId = recipe.id;
+          }
+        });
+
+
+        url = "/recipes/" + recipeId;
         return (
-            <div className="search-result-item" key={idx}>
-              <Link to={url} key={idx}>{userResults[parseInt(recipeId)]}</Link>
+            <div className="search-result-item" key={recipeId}>
+              <Link to={url}>{userResults[parseInt(searchId)]}</Link>
             </div>
           );
       });
