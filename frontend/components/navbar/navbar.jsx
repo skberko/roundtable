@@ -26,8 +26,6 @@ var SignOut = React.createClass({
   }
 });
 
-
-
 var NavBar = React.createClass({
   mixins: [LinkedStateMixin, require('react-onclickoutside')],
 
@@ -68,19 +66,12 @@ var NavBar = React.createClass({
   search: function () {
     var recipes = this.state.recipes;
     var recipeTitles = [];
-    // var recipeTitlesIDs = [];
 
     if (recipes.length > 0) {
       recipes.map(function (recipe) {
         recipeTitles.push(recipe.title);
       });
     }
-
-    // if (recipes.length > 0) {
-    //   recipes.map(function (recipe) {
-    //     recipeTitlesIDs.push({title: recipe.title, recipeId: recipe.id});
-    //   });
-    // }
 
     var fuseOptions = {
       caseSensitive: false,
@@ -97,7 +88,6 @@ var NavBar = React.createClass({
       fuse.search(this.state.searchInput).forEach(function (result) {
         fuseSearchResults[result] = fuse.list[result];
       });
-      // debugger
       return fuseSearchResults;
     } else {
       return false;
@@ -162,12 +152,6 @@ var NavBar = React.createClass({
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <SignOut/>
           </div>
-
-
-
-
-
-
 
         </div>
       </nav>
