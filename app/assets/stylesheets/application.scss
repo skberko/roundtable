@@ -369,10 +369,11 @@ button:focus { outline:0 !important; }
 }
 
 .recipe-description {
-  display: block;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-bottom: 3%
+  width: 50%;
+  // text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
 }
 
 .recipe-detail-label {
