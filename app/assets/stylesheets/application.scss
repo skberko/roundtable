@@ -294,7 +294,6 @@ button:focus { outline:0 !important; }
   width: 250px;
   overflow: hidden;
   cursor: pointer;
-  // opacity: 0.9;
   border-radius: 4px;
   background-repeat: no-repeat;
   transform: scale(1.02);
@@ -431,7 +430,6 @@ button:focus { outline:0 !important; }
 }
 
 .nonhighlighted-step:hover{
-  // text-decoration: underline;
   background-color: rgba(91, 44, 15, 0.2);
 }
 
@@ -527,8 +525,6 @@ button:focus { outline:0 !important; }
 
 .search-listsearch-listreveal {
 	background: #F8F8F8;
-	// border-bottom: 3px solid black;
-	// width: 812px;
   text-color: #53301F;
 	position: fixed;
   top: 52px;
@@ -539,13 +535,19 @@ button:focus { outline:0 !important; }
   border-radius: 3px;
   max-height: 50vh;
   overflow: scroll;
-  width: 30vw;
+  width: 350px;
   border: 1px solid #53301F;
 }
 
 .search-result-item {
   margin-top: 5px;
   margin-bottom: 5px;
+  width: 300px;
+}
+
+.search-result-item:hover {
+  background-color: rgba(91, 44, 15, 0.2);
+  text-decoration: none;
 }
 
 .search-parameter {

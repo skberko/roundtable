@@ -107,7 +107,6 @@ var NavBar = React.createClass({
       var userResults = this.search();
       searchResults = Object.keys(userResults).map(function (searchId) {
         var recipeTitle = userResults[parseInt(searchId)];
-        console.log('hey');
         recipes.forEach(function(recipe) {
           if (recipeTitle === recipe.title) {
             recipeId = recipe.id;
@@ -117,10 +116,14 @@ var NavBar = React.createClass({
 
         url = "/recipes/" + recipeId;
         return (
-            <div className="search-result-item" key={recipeId}>
-              <Link to={url}>{userResults[parseInt(searchId)]}</Link>
-            </div>
-          );
+          <Link
+            className="search-result-item"
+            key={recipeId}
+            to={url}>
+            {recipeTitle}
+            <br/>
+          </Link>
+        );
       });
     }
 
