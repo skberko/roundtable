@@ -69,8 +69,7 @@ var RecipeDetail = React.createClass({
 
         <img className="recipe-image" src={imageUrl}></img>
 
-        <div className="recipe-detail-label">About</div>
-        <article className="recipe-ingredients-description">
+        <article className="recipe-description">
           {this.state.recipe.description}
         </article>
 
