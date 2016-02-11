@@ -527,7 +527,7 @@ button:focus { outline:0 !important; }
 	background: #F8F8F8;
   text-color: #53301F;
 	position: fixed;
-  top: 52px;
+  top: 51px;
 	left: 137px;
 	padding-left: 2%;
   padding-right: 2%;
@@ -542,7 +542,6 @@ button:focus { outline:0 !important; }
 .search-result-item {
   margin-top: 5px;
   margin-bottom: 5px;
-  width: 300px;
 }
 
 .search-result-item:hover {
@@ -553,4 +552,5 @@ button:focus { outline:0 !important; }
 .search-parameter {
 	padding-left: 2%;
   color: #7C7357;
+  width: 330px;
 }

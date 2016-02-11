@@ -137,12 +137,11 @@ var NavBar = React.createClass({
           <form className='navbar-form navbar-left collapse navbar-collapse' role='search'>
             <div className="search-bar">
                <div onSubmit={this.handleSubmit}>
-                 <div className="search-parameter">
                    <input
+                     className="search-parameter"
                      type="text"
-                     placeholder="Search recipes..."
+                     placeholder= "Search recipes..."
                      valueLink={this.linkState('searchInput')} />
-                 </div>
                </div>
 
                <div onClick={this.clearSearchInput} className={"search-list" + searchList}>
