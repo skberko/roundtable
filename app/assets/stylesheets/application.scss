@@ -303,7 +303,9 @@ button:focus { outline:0 !important; }
    background: rgba(0, 0, 0, 0.5);
    height: 70vh;
    min-height: 440px;
+   max-height: 600px;
    min-width: 680px;
+   max-width: 950px;
    padding-bottom: 2vh;
    padding-top: 2vh;
    margin-top: 12vh;
