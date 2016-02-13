@@ -209,7 +209,7 @@ button:focus { outline:0 !important; }
   color: #FAE3B1;
   width: 60vw;
   min-width: 580px;
-  display: inline-block;
+  display: inline;
   margin-bottom: 50px;
   margin-top: 40px;
   margin-left: 4%;
@@ -316,6 +316,7 @@ button:focus { outline:0 !important; }
    position: relative;
    font-size: 14px;
    top: 5%;
+   margin-top: 120px;
    color: #FAE3B1;
   //  position: absolute;
   // bottom: 0px;
