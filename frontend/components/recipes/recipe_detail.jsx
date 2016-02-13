@@ -46,7 +46,6 @@ var RecipeDetail = React.createClass({
     this.setState({recipe: this.getStateFromStore()});
   },
 
-
   render: function () {
     if (this.state.recipe === undefined) { return <div></div>; }
 

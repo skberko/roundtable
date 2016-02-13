@@ -205,6 +205,72 @@ button:focus { outline:0 !important; }
   margin-bottom: 8%;
 }
 
+.index-features {
+  color: #FAE3B1;
+  width: 60vw;
+  min-width: 580px;
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  margin-left: 4%;
+  font-size: 24px;
+}
+
+.index-features-visible {
+  // float:left;
+  min-width: 580px;
+  display: inline-block;
+  font-weight:600;
+  overflow:hidden;
+  height:40px;
+}
+
+.index-features-perm-text {
+  display:inline;
+  float:left;
+  margin:0;
+}
+
+.index-features-list {
+  margin-top:0;
+  padding-left:110px;
+  text-align:left;
+  list-style:none;
+  animation:10s linear 0s normal none infinite change;
+  -webkit-animation:10s linear 0s normal none infinite change;
+  -moz-animation:10s linear 0s normal none infinite change;
+  -o-animation:10s linear 0s normal none infinite change;
+}
+
+.index-features-list .index-features-list-item {
+  // line-height:40px;
+  margin-left: 143px;
+  height: 40px;
+}
+
+@-webkit-keyframes change {
+  0%   {margin-top:0;}
+  15%  {margin-top:0;}
+  25%  {margin-top:-40px;}
+  40%  {margin-top:-40px;}
+  50%  {margin-top:-80px;}
+  65%  {margin-top:-80px;}
+  75%  {margin-top:-40px;}
+  85%  {margin-top:-40px;}
+  100% {margin-top:0;}
+}
+@keyframes change {
+  0%   {margin-top:0;}
+  15%  {margin-top:0;}
+  25%  {margin-top:-40px;}
+  40%  {margin-top:-40px;}
+  50%  {margin-top:-80px;}
+  65%  {margin-top:-80px;}
+  75%  {margin-top:-40px;}
+  85%  {margin-top:-40px;}
+  100% {margin-top:0;}
+}
+
 .welcome-list {
   list-style: none;
   position: relative;
@@ -235,11 +301,12 @@ button:focus { outline:0 !important; }
    width: 70vw;
    border-radius: 5px;
    background: rgba(0, 0, 0, 0.5);
-   min-height: 339px;
+   height: 70vh;
+   min-height: 440px;
    min-width: 680px;
    padding-bottom: 2vh;
    padding-top: 2vh;
-   margin-top: 10vh;
+   margin-top: 12vh;
    margin-bottom: 10vh;
  }
 
@@ -248,6 +315,8 @@ button:focus { outline:0 !important; }
    font-size: 14px;
    top: 5%;
    color: #FAE3B1;
+  //  position: absolute;
+  // bottom: 0px;
  }
 
 .white-link {
@@ -370,7 +439,6 @@ button:focus { outline:0 !important; }
 
 .recipe-description {
   width: 50%;
-  // text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3%;

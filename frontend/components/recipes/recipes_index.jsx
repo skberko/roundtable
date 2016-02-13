@@ -37,12 +37,23 @@ var RecipesIndex = React.createClass({
             <div className="pithy-welcome-text">
               Your kitchen, annotated
             </div>
-            <ul className="welcome-list">
-              <li className="welcome-list-item">Explore new recipes</li>
-              <li className="welcome-list-item">Share your favorites</li>
-              <li className="welcome-list-item">Read tips from other cooks</li>
-              <li className="welcome-list-item">Share your own tips</li>
-            </ul>
+
+            <div className="index-features">
+              <div className="index-features-visible">
+                <p className="index-features-perm-text">
+                  RoundTable lets you
+                </p>
+                <ul className="index-features-list">
+                  <li className="index-features-list-item">share and explore recipes</li>
+                  <li className="index-features-list-item">read tips from other cooks</li>
+                  <li className="index-features-list-item">share your own tips</li>
+                </ul>
+              </div>
+            </div>
+
+
+
+
             <div className="hero-links">
               <a className="white-link" onClick={this.scrollToRecipes}>
                 All recipes
