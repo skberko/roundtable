@@ -1,6 +1,6 @@
 # RoundTable
 
-[RoundTable](http://cook-roundtable) is a cooking-focused web application built on Ruby on Rails and React.js. Inspired by Genius, it allows aspiring chefs to share and annotate recipes step by step, thereby mitigating much of the confusion that comes with trying a new recipe.
+[RoundTable](http://cook-roundtable.com) is a cooking-focused web application built on Ruby on Rails and React.js. Inspired by Genius, it allows aspiring chefs to share and annotate recipes step by step, thereby mitigating much of the confusion that comes with trying a new recipe.
 
 RoundTable allows users to:
 
