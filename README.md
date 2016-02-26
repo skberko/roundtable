@@ -18,6 +18,7 @@ RoundTable allows users to:
 
 - The back end is built on [Ruby on Rails](http://rubyonrails.org/) and [PostgreSQL](http://www.postgresql.org/).
 - The front end is built using [React](https://facebook.github.io/react/) and [Flux](https://facebook.github.io/react/docs/flux-overview.html).
+- Authication is handled by [bcrypt](https://rubygems.org/gems/bcrypt-ruby/versions/3.1.5).
 - The [Cloudinary](http://cloudinary.com) API and upload widget to allow uses to upload recipes images that are stored in the cloud.
 - The [Fuse.js](https://github.com/krisk/Fuse) JavaScript library adds a robust fuzzy search feature that accounts for user spelling errors.
 - Active Record [nested attributes](http://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html) allow users to create an unlimited number of steps without making additional AJAX requests, speeding up the app considerably.
