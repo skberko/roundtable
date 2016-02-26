@@ -14,6 +14,12 @@ RoundTable allows users to:
 - Annotate any step of any recipe
 - Search for recipes, accounting for user errors like spelling
 
+![Image of splash page](http://res.cloudinary.com/dz5btfj9w/image/upload/c_scale,h_400/v1456447985/splash_view_nv35wp.png)
+
+![Image of recipe index](http://res.cloudinary.com/dz5btfj9w/image/upload/c_scale,h_400/v1456447987/recipes_index_view_zztmui.png)
+
+![Image of recipe annotation](http://res.cloudinary.com/dz5btfj9w/image/upload/c_scale,h_400/v1456447980/annotation_view_jmtdwx.png)
+
 # Technologies Used
 
 - The back end is built on [Ruby on Rails](http://rubyonrails.org/) and [PostgreSQL](http://www.postgresql.org/).
